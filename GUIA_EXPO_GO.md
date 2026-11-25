@@ -9,9 +9,10 @@
 
 ## ⚡ Paso a Paso para Probar en tu Teléfono (Android o iPhone)
 
-### 1. Requisito en tu Teléfono:
+### 1. Requisito en tu Teléfono y PC:
+* Instala **Node.js** en la PC (si estás en una computadora nueva).
 * Abre tu aplicación **Expo Go** en tu celular.
-* **Importante:** Tu celular debe estar conectado a la **misma red Wi-Fi** que tu laptop (`10.95.97.137`).
+* **Importante:** Tu celular debe estar conectado a la **misma red Wi-Fi** que tu PC o laptop (el lanzador `INICIAR_EXPO_GO.bat` detecta automáticamente la IP de tu PC e instala las dependencias de `expo_app/` la primera vez).
 
 ---
 
@@ -56,6 +57,6 @@ En la pantalla de tu terminal aparecerá el **Código QR grande de Expo**.
 
 ### 5. Alternativa Directa sin Expo Go (PWA 100% Nativa):
 Si en algún momento no quieres abrir Expo Go, también puedes abrir el navegador de tu celular (Google Chrome o Safari):
-1. En tu celular, entra a: **`http://10.95.97.137:3000`** (o entra directo desde el navegador de tu móvil).
+1. En tu celular, entra a **`http://<IP-DE-TU-PC>:3000`** (la IP exacta aparece al ejecutar `INICIAR_EXPO_GO.bat`).
 2. Toca los tres puntos de Chrome y selecciona **"Instalar aplicación"** / **"Agregar a pantalla principal"**.
 3. Se instalará el ícono de **Ford SafeTeen** como una app nativa en tu móvil.

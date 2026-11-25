@@ -7,12 +7,28 @@ import {
   TextInput, 
   TouchableOpacity, 
   ActivityIndicator, 
-  StatusBar 
+  StatusBar,
+  NativeModules
 } from 'react-native';
 import { WebView } from 'react-native-webview';
 
-// Dirección IP local actual de tu PC en la red Wi-Fi
-const DEFAULT_URL = 'http://10.95.97.137:3000';
+// Detecta automáticamente la IP de la PC desde la URL de Metro (funciona en cualquier PC y Wi-Fi)
+function detectServerUrl() {
+  try {
+    const scriptURL = NativeModules?.SourceCode?.scriptURL;
+    if (scriptURL && typeof scriptURL === 'string') {
+      const match = scriptURL.match(/^https?:\/\/([^/:]+)(?::\d+)?/);
+      if (match && match[1] && match[1] !== 'localhost' && match[1] !== '127.0.0.1') {
+        return `http://${match[1]}:3000`;
+      }
+    }
+  } catch (e) {
+    // Fallback silencioso a IP por defecto
+  }
+  return 'http://192.168.1.100:3000';
+}
+
+const DEFAULT_URL = detectServerUrl();
 
 export default function App() {
   const [serverUrl, setServerUrl] = useState(DEFAULT_URL);
@@ -106,7 +122,7 @@ export default function App() {
               style={styles.input}
               value={inputUrl}
               onChangeText={setInputUrl}
-              placeholder="http://10.95.97.137:3000"
+              placeholder={DEFAULT_URL}
               placeholderTextColor="#64748b"
               autoCapitalize="none"
               autoCorrect={false}
