@@ -1,0 +1,37 @@
+# Dependencias Node.js / Expo
+node_modules/
+expo_app/node_modules/
+expo_app/.expo/
+
+# Carpetas temporales / análisis externos no pertenecientes al código fuente del MVP
+temp_rea/
+re_targets/
+temp_audit_skill/
+temp_balsamiq_document.*
+
+# Artefactos compilados de Java Desktop
+java_mobile/*.class
+*.class
+
+# Compilados y cachés de Android / Gradle
+android_project/.gradle/
+android_project/build/
+android_project/app/build/
+android_project/.idea/
+android_project/local.properties
+*.apk
+*.aab
+
+# Compilados iOS / Xcode locales
+ios/App/build/
+ios/App/DerivedData/
+*.xcarchive
+*.ipa
+
+# Logs y sistema operativo
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.env
+.env.local

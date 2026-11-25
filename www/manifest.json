@@ -1,0 +1,18 @@
+{
+  "name": "Ford SafeTeen Co-Drive",
+  "short_name": "SafeTeen",
+  "description": "Ecosistema Telemático y de Aprendizaje Familiar • Ford Territory Titanium",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050811",
+  "theme_color": "#002c6c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./pantallas en balsamiq/W01_Dashboard_Conductor_Joven.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

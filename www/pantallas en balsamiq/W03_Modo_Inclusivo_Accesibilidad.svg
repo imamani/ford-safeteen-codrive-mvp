@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 920" width="460" height="920">
+  <defs>
+    <filter id="balsamiq-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+    <filter id="sticky-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+    text {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      fill: #18181b;
+    }
+    .sketch-border {
+      stroke: #18181b;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Fondo General de Mesa de Trabajo -->
+  <rect x="0" y="0" width="460" height="920" fill="#f8fafc" />
+
+  <!-- Chasis Smartphone Estilo Balsamiq -->
+  <rect x="35" y="25" width="390" height="860" rx="36" fill="#ffffff" stroke="#18181b" stroke-width="3" filter="url(#balsamiq-shadow)" />
+
+  <!-- Bocina y Cámara Frontal (Notch) -->
+  <rect x="190" y="42" width="60" height="6" rx="3" fill="#18181b" />
+  <circle cx="265" cy="45" r="4" fill="#18181b" />
+
+  <!-- Área de Pantalla -->
+  <rect x="52" y="65" width="356" height="780" rx="18" fill="#ffffff" class="sketch-border" />
+
+  <!-- Barra Superior de Navegación -->
+  <rect x="65" y="80" width="45" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="76" y="98" font-size="12" font-weight="bold">[ = ]</text>
+
+  <text x="230" y="93" text-anchor="middle" font-size="14" font-weight="bold">Accesibilidad Sensorial</text>
+  <text x="230" y="108" text-anchor="middle" font-size="10" fill="#52525b">Inclusión Universal ISO</text>
+
+  <rect x="345" y="80" width="50" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="355" y="98" font-size="10" font-weight="bold">W-03</text>
+
+  <line x1="65" y1="118" x2="395" y2="118" stroke="#18181b" stroke-width="1.8" stroke-dasharray="4,4" />
+
+  <!-- Contenido Inyectado de la Pantalla -->
+  
+  <text x="230" y="140" text-anchor="middle" font-size="11" font-weight="bold">PERFIL INCLUSIVO: MATEO HUARCA (21)</text>
+  <text x="230" y="155" text-anchor="middle" font-size="9" fill="#71717a">Hipoacusia Neurosensorial (-65 dB) • ISO 9241-171</text>
+
+  <!-- Switch 1 -->
+  <rect x="68" y="172" width="324" height="60" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="80" y="195" font-size="10.5" font-weight="bold">Sustitución de Pitidos por Luces SYNC 4</text>
+  <text x="80" y="212" font-size="8" fill="#71717a">Franjas cian/ámbar en pantalla 12'' sin sonidos molestos</text>
+  <rect x="330" y="185" width="48" height="26" rx="13" fill="#18181b" />
+  <circle cx="363" cy="198" r="9" fill="#ffffff" />
+
+  <!-- Switch 2 -->
+  <rect x="68" y="242" width="324" height="60" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="80" y="265" font-size="10.5" font-weight="bold">Pulsos Hápticos en Volante y Asiento</text>
+  <text x="80" y="282" font-size="8" fill="#71717a">Vibración direccional en desvío de carril y punto ciego</text>
+  <rect x="330" y="255" width="48" height="26" rx="13" fill="#18181b" />
+  <circle cx="363" cy="268" r="9" fill="#ffffff" />
+
+  <!-- Switch 3 -->
+  <rect x="68" y="312" width="324" height="60" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="80" y="335" font-size="10.5" font-weight="bold">Detector Inteligente de Sirenas Externas</text>
+  <text x="80" y="352" font-size="8" fill="#71717a">Micrófonos SYNC 4 reconocen acústica de ambulancias</text>
+  <rect x="330" y="325" width="48" height="26" rx="13" fill="#18181b" />
+  <circle cx="363" cy="338" r="9" fill="#ffffff" />
+
+  <!-- Vista Previa en Clúster -->
+  <rect x="68" y="385" width="324" height="130" rx="10" fill="#f4f4f5" class="sketch-border" />
+  <text x="230" y="405" text-anchor="middle" font-size="9.5" font-weight="bold">VISTA PREVIA EN CLÚSTER SYNC 4</text>
+  
+  <rect x="80" y="415" width="300" height="55" rx="6" fill="#dc2626" stroke="#18181b" stroke-width="1.8" />
+  <text x="230" y="438" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#ffffff">⚠️ ALERTA VISUAL INCLUSIVA</text>
+  <text x="230" y="455" text-anchor="middle" font-size="8.5" fill="#fee2e2">Ambulancia aproximándose por retaguardia</text>
+  <text x="230" y="495" text-anchor="middle" font-size="8" fill="#71717a">(Volante: vibración lado izquierdo • Clúster: ámbar perimétrico)</text>
+
+  <!-- Botones de Acción -->
+  <rect x="68" y="528" width="155" height="38" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="145" y="552" text-anchor="middle" font-size="10" font-weight="bold">PROBAR HÁPTICO</text>
+
+  <rect x="235" y="528" width="157" height="38" rx="8" fill="#18181b" class="sketch-border" />
+  <text x="313" y="552" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">GUARDAR PERFIL</text>
+
+  <rect x="68" y="576" width="324" height="38" rx="8" fill="#ffffff" stroke="#18181b" stroke-width="2" />
+  <text x="230" y="600" text-anchor="middle" font-size="10" font-weight="bold">DESCARGAR CERTIFICADO (Score 95/100)</text>
+
+
+  <!-- Botón Home Inferior del Smartphone -->
+  <rect x="180" y="860" width="100" height="4" rx="2" fill="#18181b" />
+
+  <!-- Sticky Note de Balsamiq -->
+  <g transform="rotate(-3 340 820)">
+    <rect x="230" y="745" width="165" height="85" rx="2" fill="#fef08a" stroke="#18181b" stroke-width="1.8" filter="url(#sticky-shadow)" />
+    <text x="240" y="765" font-size="10" font-weight="bold" fill="#854d0e">📌 NOTA BALSAMIQ:</text>
+    <text x="240" y="782" font-size="8.5" fill="#713f12">• Accesibilidad universal sensorial.</text>
+    <text x="240" y="796" font-size="8.5" fill="#713f12">• Cumple WCAG 2.2 AA e ISO 9241-171.</text>
+    <text x="240" y="810" font-size="8.5" fill="#713f12">• Valida RF-13 y RF-14 (Mateo).</text>
+  </g>
+</svg>

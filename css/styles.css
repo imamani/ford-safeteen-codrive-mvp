@@ -1,0 +1,177 @@
+/**
+ * Ford SafeTeen Co-Drive - Hojas de Estilo del MVP
+ * APF3 - Diseño de Productos y Servicios
+ * Optimizado con Modern Web Guidance (Accesibilidad, Form Factor y Safe Area)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    --ford-blue: #002c6c;
+    --ford-cyan: #06b6d4;
+    --ford-dark: #050811;
+    --ford-panel: #111827;
+    --target-size: 44px; /* WCAG 2.5.5 Touch Target Size */
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100dvh; /* Dynamic viewport units prevent browser bar jumps */
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #050811;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-wrap: anywhere; /* Evita que palabras largas o VINs ensanchen la pantalla */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Tipografía Responsiva y Legibilidad */
+h1, h2, h3, h4 {
+    text-wrap: balance; /* Evita huérfanos tipográficos en títulos */
+}
+
+p, li {
+    text-wrap: pretty; /* Distribuye el texto de manera armónica */
+}
+
+/* Evitar zoom automático intrusivo en Safari / iPhone al enfocar inputs */
+input:not([type="checkbox"], [type="radio"]),
+textarea,
+select {
+    font-size: max(16px, 0.875rem);
+}
+
+/* Tamaño de controles táctiles en pantallas móviles (WCAG 2.5.5) */
+@media (pointer: coarse) {
+    button, 
+    [role="button"], 
+    .bottom-tab,
+    input:not([type="checkbox"], [type="radio"]) {
+        min-height: 44px;
+    }
+}
+
+/* Modo Balsamiq Wireframe (Boceto Estilo Mano Alzada) */
+body.mode-balsamiq {
+    font-family: 'Comic Neue', cursive, sans-serif !important;
+    background-color: #f4f4f5 !important;
+    color: #18181b !important;
+}
+
+body.mode-balsamiq .card-section {
+    background-color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+    border-radius: 8px !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+}
+
+body.mode-balsamiq button {
+    border: 2px solid #000000 !important;
+    border-radius: 8px !important;
+}
+
+/* Resplandores de Cabina HMI Ford SYNC 4 */
+.glow-cyan {
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), inset 0 0 20px rgba(6, 182, 212, 0.2);
+    border-color: #06b6d4 !important;
+}
+
+.glow-amber {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5), inset 0 0 25px rgba(245, 158, 11, 0.25);
+    border-color: #f59e0b !important;
+}
+
+.glow-red {
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.6), inset 0 0 30px rgba(239, 68, 68, 0.3);
+    border-color: #ef4444 !important;
+}
+
+.score-dial-glow {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.25), inset 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+/* Pulso Háptico / Vibración Gráfica */
+@keyframes hapticVibe {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    20% { transform: translate(-3px, 2px) rotate(-0.5deg); }
+    40% { transform: translate(3px, -2px) rotate(0.5deg); }
+    60% { transform: translate(-2px, -1px) rotate(-0.3deg); }
+    80% { transform: translate(2px, 1px) rotate(0.3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.haptic-pulse {
+    animation: hapticVibe 0.35s ease-in-out infinite;
+}
+
+/* Animaciones Fluidas */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slideUp {
+    animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+    animation: shake 0.35s ease-in-out;
+}
+
+/* Ajustes Móviles Safe Area (Notch y Home Bar de iPhone / Android) */
+#mobile-app-header {
+    padding-top: max(0.65rem, env(safe-area-inset-top, 0px));
+    padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+#mobile-bottom-tabs {
+    padding-bottom: max(0.6rem, env(safe-area-inset-bottom, 0px));
+    padding-left: max(0.5rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.5rem, env(safe-area-inset-right, 0px));
+}
+
+/* Barra de Desplazamiento Personalizada */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}

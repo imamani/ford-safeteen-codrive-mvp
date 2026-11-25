@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#050811"
+    android:padding="20dp">
+
+    <!-- Encabezado de Identidad -->
+    <TextView
+        android:id="@+id/txtConductor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomás Morales (20 años)"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/txtVehiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ford Territory Titanium 1.5L EcoBoost"
+        android:textColor="#38BDF8"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp" />
+
+    <!-- Dial Central de Score 94/100 -->
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="#0F172A"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="94"
+            android:textColor="#34D399"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/ 100 • Nivel Excelente"
+            android:textColor="#94A3B8"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Barras de Telemetría CAN -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frenado Suave y Anticipado (40%) - 96%"
+        android:textColor="#E2E8F0"
+        android:textSize="11sp"
+        android:layout_marginTop="20dp" />
+
+    <ProgressBar
+        android:id="@+id/progressFrenado"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="96" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Control de Carril Co-Pilot360 (30%) - 92%"
+        android:textColor="#E2E8F0"
+        android:textSize="11sp"
+        android:layout_marginTop="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressCarril"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="92" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Velocidad Reglamentaria (30%) - 94%"
+        android:textColor="#E2E8F0"
+        android:textSize="11sp"
+        android:layout_marginTop="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressVelocidad"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="94" />
+
+    <!-- Botón de Compartir Score -->
+    <Button
+        android:id="@+id/btnCompartirScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="COMPARTIR SCORE CON TUTOR"
+        android:backgroundTint="#0284C7"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!-- Barra de Navegación Rápida a otras pantallas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnIrTutor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tutor"
+            android:textSize="10sp"
+            android:backgroundTint="#1E293B" />
+
+        <Button
+            android:id="@+id/btnIrInclusivo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Inclusivo"
+            android:textSize="10sp"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#1E293B" />
+
+        <Button
+            android:id="@+id/btnIrContrato"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Contrato"
+            android:textSize="10sp"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#1E293B" />
+
+        <Button
+            android:id="@+id/btnIrSync4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SYNC 4"
+            android:textSize="10sp"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#0284C7" />
+    </LinearLayout>
+
+</LinearLayout>

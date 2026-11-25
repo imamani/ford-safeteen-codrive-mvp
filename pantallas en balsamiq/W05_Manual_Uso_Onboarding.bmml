@@ -1,0 +1,63 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="450" measuredH="880" mockupW="400" mockupH="850">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="20" y="10" w="390" h="840" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="50" y="115" w="55" h="26" measuredW="55" measuredH="26" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties><text>%3C%20Atr%C3%A1s</text></controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="110" y="110" w="200" h="-1" measuredW="180" measuredH="20" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties><size>13</size><bold>true</bold><text>Manual%20de%20Uso%20y%20Gu%C3%ADa</text></controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="320" y="115" w="60" h="26" measuredW="60" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties><text>%5BGu%C3%ADa%5D</text></controlProperties>
+    </control>
+
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="50" y="150" w="325" h="-1" measuredW="280" measuredH="18" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties><align>center</align><bold>true</bold><size>11</size><text>ONBOARDING%3A%20PASO%20A%20PASO%20FAMILIAR</text></controlProperties>
+    </control>
+
+    <!-- Paso 1 -->
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Canvas" x="48" y="185" w="330" h="80" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::RoundButton" x="58" y="200" w="35" h="35" measuredW="32" measuredH="32" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>1</text></controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Paragraph" x="105" y="195" w="260" h="65" measuredW="200" measuredH="80" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><size>10</size><text>Paso%201%3A%20Vincular%20con%20SYNC%204%0A%5Bsize%3D8%5DIngresa%20el%20VIN%20en%20FordPass%20para%20activar%20la%20captura%20telem%C3%A1tica%20del%20bus%20CAN%20en%20segundo%20plano.%5B/size%5D</text></controlProperties>
+    </control>
+
+    <!-- Paso 2 -->
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Canvas" x="48" y="275" w="330" h="80" measuredW="100" measuredH="70" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::RoundButton" x="58" y="290" w="35" h="35" measuredW="32" measuredH="32" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>2</text></controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Paragraph" x="105" y="285" w="260" h="65" measuredW="200" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><size>10</size><text>Paso%202%3A%20Pactar%20Contrato%20Digital%0A%5Bsize%3D8%5DSeleccionen%20el%20Score%20meta%20%28ej.%2088%20pts%29%20y%20las%20geocercas%20de%20arribo%20seguro%20%28UTP%2C%20Hogar%29.%5B/size%5D</text></controlProperties>
+    </control>
+
+    <!-- Paso 3 -->
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="48" y="365" w="330" h="80" measuredW="100" measuredH="70" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::RoundButton" x="58" y="380" w="35" h="35" measuredW="32" measuredH="32" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>3</text></controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Paragraph" x="105" y="375" w="260" h="65" measuredW="200" measuredH="80" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><size>10</size><text>Paso%203%3A%20Conducir%20en%20Silencio%0A%5Bsize%3D8%5DLa%20pantalla%20SYNC%204%20gu%C3%ADa%20con%20resplandor%20cian%20ambiental%20y%20Co-Pilot360%20sin%20pitidos.%5B/size%5D</text></controlProperties>
+    </control>
+
+    <!-- Paso 4 -->
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Canvas" x="48" y="455" w="330" h="80" measuredW="100" measuredH="70" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::RoundButton" x="58" y="470" w="35" h="35" measuredW="32" measuredH="32" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>4</text></controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Paragraph" x="105" y="465" w="260" h="65" measuredW="200" measuredH="80" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><size>10</size><text>Paso%204%3A%20Llegada%20Segura%20y%20Score%0A%5Bsize%3D8%5DAl%20poner%20Park%20%28P%29%2C%20el%20padre%20recibe%20push%20y%20el%20joven%20desbloquea%20sus%20medallas.%5B/size%5D</text></controlProperties>
+    </control>
+
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Button" x="48" y="565" w="330" h="45" measuredW="230" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>INICIAR%20TOUR%20INTERACTIVO</text></controlProperties>
+    </control>
+
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::StickyNote" x="250" y="635" w="135" h="70" measuredW="109" measuredH="123" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>Onboarding%20sin%20fricci%C3%B3n.%0ACapacita%20a%20la%20familia%0Aen%203%20minutos.</text></controlProperties>
+    </control>
+  </controls>
+</mockup>

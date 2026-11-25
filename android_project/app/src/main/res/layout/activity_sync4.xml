@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#050811"
+    android:padding="16dp">
+
+    <!-- Encabezado de SYNC 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FORD SYNC 4 (12.3'') • CABINA"
+            android:textColor="#38BDF8"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtMarchaActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marcha: D (Drive)"
+            android:textColor="#34D399"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Botonera de control en cabina -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnCambiarMarcha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🅿️ Estacionar en Park (P)"
+            android:backgroundTint="#0284C7"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnSirena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚨 Sirena"
+            android:backgroundTint="#DC2626"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- VISTA 1: EN MARCHA (70/30) -->
+    <LinearLayout
+        android:id="@+id/layoutEnMarcha"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Tarjeta de Navegación Nativa (70%) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#0F172A"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗺️ NAVEGACIÓN PRINCIPAL (ANDROID AUTO / WAZE)"
+                android:textColor="#94A3B8"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En 180 m: Gire a la derecha hacia Av. Cayma"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destino: Campus UTP Arequipa • 48 km/h"
+                android:textColor="#34D399"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Tarjeta SafeTeen Smart Card (30%) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#0F172A"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAFETEEN SMART CARD • BUS CAN 500k"
+                android:textColor="#38BDF8"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtScoreCabina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score: 94/100 (Óptimo • Luz Cian)"
+                android:textColor="#34D399"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Freno Hidráulico: 12 bar (Suave) • Buckle: OK"
+                android:textColor="#CBD5E1"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- VISTA 2: IN-VEHICLE REPORT CARD (PARK P - INSPIRADO EN GM) -->
+    <LinearLayout
+        android:id="@+id/layoutReportCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#064E3B"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🅿️ VIAJE FINALIZADO • REPORT CARD (GM)"
+            android:textColor="#A7F3D0"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score Final: 94/100"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Distancia: 6.8 km en 22 minutos\n• Velocidad Máx: 52 km/h (Respetada)\n• Frenadas Preventivas Co-Pilot360: 1 (OK)\n• Celular al volante: 0 llamadas"
+            android:textColor="#E2E8F0"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✔ Notificación despachada a Ricardo Morales: Tomás en Campus UTP con batería al 84%"
+            android:textColor="#6EE7B7"
+            android:textSize="11sp"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+    <!-- Botón Volver -->
+    <Button
+        android:id="@+id/btnVolverJoven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="← Volver al Dashboard Joven"
+        android:backgroundTint="#1E293B"
+        android:textColor="#E2E8F0"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>

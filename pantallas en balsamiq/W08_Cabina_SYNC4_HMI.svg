@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+  <defs>
+    <filter id="balsamiq-shadow-sync" x="-3%" y="-3%" width="108%" height="108%">
+      <feDropShadow dx="5" dy="5" stdDeviation="0" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+    text {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      fill: #18181b;
+    }
+    .sketch-border {
+      stroke: #18181b;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Mesa de Trabajo -->
+  <rect x="0" y="0" width="1000" height="640" fill="#f8fafc" />
+
+  <!-- Consola Táctil de Cabina SYNC 4 de 12'' -->
+  <rect x="30" y="25" width="940" height="590" rx="28" fill="#ffffff" stroke="#18181b" stroke-width="3.5" filter="url(#balsamiq-shadow-sync)" />
+
+  <!-- Marco de Luz Ambiental Cian (Coaching Silencioso) -->
+  <rect x="48" y="42" width="904" height="556" rx="20" fill="none" stroke="#0891b2" stroke-width="4" stroke-dasharray="8,6" />
+
+  <!-- Barra de Estado Superior -->
+  <rect x="52" y="46" width="896" height="42" rx="14" fill="#f4f4f5" class="sketch-border" />
+  <text x="80" y="73" font-size="14" font-weight="bold">FORD SYNC 4</text>
+  <text x="500" y="73" text-anchor="middle" font-size="13" font-weight="bold">SAFETEEN CO-DRIVE: MODO ACTIVO</text>
+  <text x="910" y="73" text-anchor="end" font-size="12" font-weight="bold">21°C • 19:32 hrs</text>
+
+  <!-- Subtítulo de Cabina -->
+  <text x="80" y="112" font-size="11">Conductor Detectado: <tspan font-weight="bold">Tomás Morales (SYNC Bluetooth)</tspan></text>
+  <text x="910" y="112" text-anchor="end" font-size="11">Modo Copiloto Silencioso: <tspan font-weight="bold">[ACTIVO - SIN PITIDOS]</tspan></text>
+
+  <!-- Panel Dividido Izquierdo: Ruta hacia Geocerca -->
+  <rect x="70" y="130" width="410" height="320" rx="12" fill="#ffffff" class="sketch-border" />
+  <text x="90" y="158" font-size="12.5" font-weight="bold">NAVEGACIÓN HACIA GEOCERCA PACTADA</text>
+  <text x="90" y="180" font-size="10.5">Destino: <tspan font-weight="bold">Campus UTP (Arequipa)</tspan></text>
+  <text x="90" y="198" font-size="10.5">Distancia Restante: <tspan font-weight="bold">2.4 km (Aprox. 6 minutos)</tspan></text>
+
+  <rect x="90" y="210" width="14" height="14" rx="2" fill="#18181b" />
+  <text x="97" y="221" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="112" y="222" font-size="9.5" font-weight="bold">Geocerca UTP Armada (Auto-Checkin en Park)</text>
+
+  <!-- Esquema gráfico limpio sin mapa invasivo -->
+  <rect x="90" y="238" width="370" height="190" rx="8" fill="#f8fafc" stroke="#18181b" stroke-width="1.8" />
+  <text x="275" y="265" text-anchor="middle" font-size="11" font-weight="bold">[ VÍA DIRECTA DESPEJADA ]</text>
+  
+  <line x1="120" y1="300" x2="430" y2="300" stroke="#18181b" stroke-width="2.5" stroke-dasharray="6,6" />
+  <circle cx="160" cy="300" r="16" fill="#18181b" />
+  <text x="160" y="305" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="bold">FORD</text>
+  
+  <rect x="370" y="282" width="36" height="36" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="2" />
+  <text x="388" y="304" text-anchor="middle" font-size="10" font-weight="bold">UTP</text>
+
+  <text x="275" y="355" text-anchor="middle" font-size="9" fill="#52525b">• Navegación sobria sin mapas saturados ni distracciones.</text>
+  <text x="275" y="375" text-anchor="middle" font-size="9" fill="#52525b">• Conducción enfocada 100% en el entorno vial.</text>
+
+  <!-- Panel Dividido Derecho: Telemetría CAN en Tiempo Real -->
+  <rect x="500" y="130" width="430" height="320" rx="12" fill="#ffffff" class="sketch-border" />
+  <text x="520" y="158" font-size="12.5" font-weight="bold">EVALUACIÓN CINEMÁTICA EN MARCHA (CAN)</text>
+
+  <!-- Frenos -->
+  <text x="520" y="190" font-size="11" font-weight="bold">Presión de Frenos: Fluida y Progresiva</text>
+  <text x="910" y="190" text-anchor="end" font-size="11" font-weight="bold">96% Óptimo</text>
+  <rect x="520" y="198" width="390" height="14" rx="7" fill="#e4e4e7" stroke="#18181b" stroke-width="1.5" />
+  <rect x="520" y="198" width="374" height="14" rx="7" fill="#18181b" />
+
+  <!-- Carril -->
+  <text x="520" y="235" font-size="11" font-weight="bold">Centrado de Carril Co-Pilot360:</text>
+  <text x="910" y="235" text-anchor="end" font-size="11" font-weight="bold">Activo (Centrado)</text>
+  <rect x="520" y="243" width="390" height="14" rx="7" fill="#e4e4e7" stroke="#18181b" stroke-width="1.5" />
+  <rect x="520" y="243" width="358" height="14" rx="7" fill="#18181b" />
+
+  <!-- Velocidad -->
+  <text x="520" y="280" font-size="11" font-weight="bold">Velocidad Actual: 48 km/h (Límite: 50 km/h)</text>
+  <text x="910" y="280" text-anchor="end" font-size="11" font-weight="bold">Reglamentaria</text>
+  <rect x="520" y="288" width="390" height="14" rx="7" fill="#e4e4e7" stroke="#18181b" stroke-width="1.5" />
+  <rect x="520" y="288" width="365" height="14" rx="7" fill="#18181b" />
+
+  <!-- Audio -->
+  <text x="520" y="325" font-size="10.5">Volumen Multimedia: <tspan font-weight="bold">65% (Sin límites punitivos MyKey)</tspan></text>
+  <text x="520" y="348" font-size="9" fill="#52525b">• Resplandor cian ambiental sustituye pitidos de advertencia no crítica.</text>
+  <text x="520" y="366" font-size="9" fill="#52525b">• Co-Pilot360 contextualiza frenadas preventivas sin alarmas falsas.</text>
+
+  <!-- Banner Inferior de Alerta Inclusiva (RF-13) -->
+  <rect x="70" y="465" width="860" height="60" rx="10" fill="#dc2626" stroke="#18181b" stroke-width="2.5" />
+  <text x="500" y="490" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">⚠️ ALERTA VISUAL INCLUSIVA: SIRENA DE EMERGENCIA DETECTADA</text>
+  <text x="500" y="510" text-anchor="middle" font-size="10.5" fill="#fee2e2">Ambulancia aproximándose por retaguardia • Volante: pulsos hápticos en lado izquierdo • Clúster: ámbar perimétrico</text>
+
+  <!-- Botones de Control en Cabina -->
+  <rect x="70" y="538" width="160" height="38" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="150" y="562" text-anchor="middle" font-size="10.5" font-weight="bold">Clima 21°C</text>
+
+  <rect x="245" y="538" width="160" height="38" rx="8" fill="#18181b" class="sketch-border" />
+  <text x="325" y="562" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#ffffff">SafeTeen Coaching</text>
+
+  <rect x="420" y="538" width="160" height="38" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="500" y="562" text-anchor="middle" font-size="10.5" font-weight="bold">Navegación</text>
+
+  <rect x="595" y="538" width="160" height="38" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="675" y="562" text-anchor="middle" font-size="10.5" font-weight="bold">Apps FordPass</text>
+
+  <rect x="770" y="538" width="160" height="38" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="850" y="562" text-anchor="middle" font-size="10.5" font-weight="bold">Audio / BT</text>
+
+  <!-- Sticky Note -->
+  <g transform="rotate(3 850 560)">
+    <rect x="740" y="480" width="190" height="90" rx="2" fill="#fef08a" stroke="#18181b" stroke-width="1.8" />
+    <text x="750" y="502" font-size="10" font-weight="bold" fill="#854d0e">📌 HMI EN CABINA SYNC 4:</text>
+    <text x="750" y="520" font-size="8.5" fill="#713f12">• Coaching ambiental sin pitidos.</text>
+    <text x="750" y="535" font-size="8.5" fill="#713f12">• Alerta visual inclusiva sirenas.</text>
+    <text x="750" y="550" font-size="8.5" fill="#713f12">• Aporte Grupo B (SmartFleet).</text>
+  </g>
+</svg>

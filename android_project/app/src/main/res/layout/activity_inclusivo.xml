@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#050811"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACCESIBILIDAD: Mateo Huarca"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hipoacusia Neurosensorial Bilateral (65 dB)"
+        android:textColor="#38BDF8"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#0F172A"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/chkLuces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sustituir pitidos por resplandor en SYNC 4"
+            android:textColor="#FFFFFF"
+            android:checked="true" />
+
+        <CheckBox
+            android:id="@+id/chkHaptico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pulsos hápticos en volante y asiento"
+            android:textColor="#FFFFFF"
+            android:checked="true"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/chkSirenas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detector de sirenas de emergencia"
+            android:textColor="#FFFFFF"
+            android:checked="true"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnProbarHaptico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="PROBAR PULSO HÁPTICO (VIBRACIÓN)"
+        android:backgroundTint="#0284C7"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnCertificado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="VER CERTIFICADO TELEMÁTICO (RF-14)"
+        android:backgroundTint="#9333EA"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

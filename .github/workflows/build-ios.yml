@@ -1,0 +1,44 @@
+name: Compilar Ford SafeTeen Co-Drive para iOS (Apple App Store)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    name: Build iOS IPA & Xcode Workspace
+    runs-on: macos-latest
+
+    steps:
+      - name: Descargar Código Fuente
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar Dependencias
+        run: npm ci
+
+      - name: Sincronizar Assets con Capacitor iOS
+        run: |
+          npx cap sync ios
+
+      - name: Configurar Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Compilar Proyecto Xcode (Archive)
+        run: |
+          cd ios/App
+          xcodebuild -project App.xcodeproj -scheme App -configuration Release -destination 'generic/platform=iOS' clean archive -archivePath build/App.xcarchive CODE_SIGNING_ALLOWED=NO
+
+      - name: Subir Archivo Compilado como Artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: Ford-SafeTeen-iOS-Build
+          path: ios/App/build/

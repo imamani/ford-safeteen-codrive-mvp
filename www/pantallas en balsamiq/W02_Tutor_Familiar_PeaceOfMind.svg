@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 920" width="460" height="920">
+  <defs>
+    <filter id="balsamiq-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+    <filter id="sticky-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+    text {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      fill: #18181b;
+    }
+    .sketch-border {
+      stroke: #18181b;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Fondo General de Mesa de Trabajo -->
+  <rect x="0" y="0" width="460" height="920" fill="#f8fafc" />
+
+  <!-- Chasis Smartphone Estilo Balsamiq -->
+  <rect x="35" y="25" width="390" height="860" rx="36" fill="#ffffff" stroke="#18181b" stroke-width="3" filter="url(#balsamiq-shadow)" />
+
+  <!-- Bocina y Cámara Frontal (Notch) -->
+  <rect x="190" y="42" width="60" height="6" rx="3" fill="#18181b" />
+  <circle cx="265" cy="45" r="4" fill="#18181b" />
+
+  <!-- Área de Pantalla -->
+  <rect x="52" y="65" width="356" height="780" rx="18" fill="#ffffff" class="sketch-border" />
+
+  <!-- Barra Superior de Navegación -->
+  <rect x="65" y="80" width="45" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="76" y="98" font-size="12" font-weight="bold">[ = ]</text>
+
+  <text x="230" y="93" text-anchor="middle" font-size="14" font-weight="bold">Ford SafeTeen • Tutor</text>
+  <text x="230" y="108" text-anchor="middle" font-size="10" fill="#52525b">Paz Mental Parental</text>
+
+  <rect x="345" y="80" width="50" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="355" y="98" font-size="10" font-weight="bold">W-02</text>
+
+  <line x1="65" y1="118" x2="395" y2="118" stroke="#18181b" stroke-width="1.8" stroke-dasharray="4,4" />
+
+  <!-- Contenido Inyectado de la Pantalla -->
+  
+  <!-- Identidad -->
+  <text x="230" y="140" text-anchor="middle" font-size="11" font-weight="bold">MODO TUTOR: ING. RICARDO MORALES</text>
+  <text x="230" y="155" text-anchor="middle" font-size="9" fill="#71717a">Vehículo Monitoreado: Ford Territory Titanium</text>
+
+  <!-- Peace of Mind Card -->
+  <rect x="68" y="172" width="324" height="150" rx="10" fill="#ffffff" stroke="#18181b" stroke-width="2.5" filter="url(#balsamiq-shadow)" />
+  <circle cx="108" cy="222" r="26" fill="#18181b" />
+  <text x="108" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">[OK]</text>
+
+  <text x="148" y="205" font-size="12" font-weight="bold">LLEGADA SEGURA CONFIRMADA</text>
+  <text x="148" y="224" font-size="10">Destino: <tspan font-weight="bold">Campus UTP (Arequipa)</tspan></text>
+  <text x="148" y="240" font-size="10">Hora de Arribo: <tspan font-weight="bold">19:45 hrs (A tiempo)</tspan></text>
+
+  <line x1="80" y1="262" x2="380" y2="262" stroke="#18181b" stroke-width="1.5" stroke-dasharray="3,3" />
+
+  <text x="90" y="284" font-size="9.5">✔ Estado Vehicular: <tspan font-weight="bold">Apagado / En Park (P)</tspan></text>
+  <text x="90" y="304" font-size="9.5">✔ Seguro de Puertas: <tspan font-weight="bold">Bloqueado Automático</tspan></text>
+
+  <!-- Smartphone del Joven -->
+  <rect x="68" y="335" width="324" height="115" rx="10" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="358" font-size="11" font-weight="bold">[DISPOSITIVO MÓVIL DE TOMÁS]</text>
+  
+  <text x="82" y="380" font-size="10">Nivel de Batería del Smartphone:</text>
+  <text x="365" y="380" text-anchor="end" font-size="11" font-weight="bold">84%</text>
+  <rect x="82" y="388" width="295" height="10" rx="5" fill="#e4e4e7" stroke="#18181b" stroke-width="1.2" />
+  <rect x="82" y="388" width="248" height="10" rx="5" fill="#18181b" />
+
+  <text x="82" y="418" font-size="9.5">● Interacciones en marcha: <tspan font-weight="bold">0 (Cero llamadas)</tspan></text>
+  <text x="82" y="435" font-size="8" fill="#71717a">* Sin pánico: celular con carga y sin llamadas al volante.</text>
+
+  <!-- Salud Mecánica -->
+  <rect x="68" y="462" width="324" height="120" rx="10" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="485" font-size="11" font-weight="bold">[SALUD MECÁNICA - BUS CAN]</text>
+  <text x="82" y="508" font-size="9.5">• Pastillas de Freno: <tspan font-weight="bold">75% vida remanente (Óptimo)</tspan></text>
+  <text x="82" y="528" font-size="9.5">• Eficiencia de Combustible: <tspan font-weight="bold">42 km/galón</tspan></text>
+  <text x="82" y="548" font-size="9.5">• Próximo Service Ford: <tspan font-weight="bold">En 4,200 km programado</tspan></text>
+  <text x="82" y="568" font-size="8" fill="#71717a">Preservación patrimonial del automóvil familiar garantizada.</text>
+
+  <!-- Botón de Aprobación -->
+  <rect x="68" y="595" width="324" height="42" rx="10" fill="#ffffff" stroke="#18181b" stroke-width="2.5" filter="url(#balsamiq-shadow)" />
+  <text x="230" y="621" text-anchor="middle" font-size="11.5" font-weight="bold">APROBAR PRÉSTAMO FIN DE SEMANA</text>
+
+
+  <!-- Botón Home Inferior del Smartphone -->
+  <rect x="180" y="860" width="100" height="4" rx="2" fill="#18181b" />
+
+  <!-- Sticky Note de Balsamiq -->
+  <g transform="rotate(-3 340 820)">
+    <rect x="230" y="745" width="165" height="85" rx="2" fill="#fef08a" stroke="#18181b" stroke-width="1.8" filter="url(#sticky-shadow)" />
+    <text x="240" y="765" font-size="10" font-weight="bold" fill="#854d0e">📌 NOTA BALSAMIQ:</text>
+    <text x="240" y="782" font-size="8.5" fill="#713f12">• Notificación instantánea en Park (P).</text>
+    <text x="240" y="796" font-size="8.5" fill="#713f12">• Monitoreo pasivo de batería 84%.</text>
+    <text x="240" y="810" font-size="8.5" fill="#713f12">• Salud de frenos (RF-04, 05, 09).</text>
+  </g>
+</svg>

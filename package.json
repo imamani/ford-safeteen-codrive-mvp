@@ -1,0 +1,26 @@
+{
+  "name": "ford-safeteen-codrive-mvp",
+  "version": "1.0.0",
+  "description": "MVP Telemático y de Aprendizaje Familiar para Ford Motor Company - APF3 UTP Arequipa",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "ford",
+    "safeteen",
+    "telematics",
+    "can-bus",
+    "mvp",
+    "utp",
+    "diseño-de-productos"
+  ],
+  "author": "Anderson Roque, Jack Ramos, Cesar Del Carpio, Ivan Mamani",
+  "license": "ISC",
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/ios": "^8.6.2"
+  }
+}

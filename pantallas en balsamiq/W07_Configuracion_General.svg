@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 920" width="460" height="920">
+  <defs>
+    <filter id="balsamiq-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+    <filter id="sticky-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+    text {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      fill: #18181b;
+    }
+    .sketch-border {
+      stroke: #18181b;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Fondo General de Mesa de Trabajo -->
+  <rect x="0" y="0" width="460" height="920" fill="#f8fafc" />
+
+  <!-- Chasis Smartphone Estilo Balsamiq -->
+  <rect x="35" y="25" width="390" height="860" rx="36" fill="#ffffff" stroke="#18181b" stroke-width="3" filter="url(#balsamiq-shadow)" />
+
+  <!-- Bocina y Cámara Frontal (Notch) -->
+  <rect x="190" y="42" width="60" height="6" rx="3" fill="#18181b" />
+  <circle cx="265" cy="45" r="4" fill="#18181b" />
+
+  <!-- Área de Pantalla -->
+  <rect x="52" y="65" width="356" height="780" rx="18" fill="#ffffff" class="sketch-border" />
+
+  <!-- Barra Superior de Navegación -->
+  <rect x="65" y="80" width="45" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="76" y="98" font-size="12" font-weight="bold">[ = ]</text>
+
+  <text x="230" y="93" text-anchor="middle" font-size="14" font-weight="bold">Configuración General</text>
+  <text x="230" y="108" text-anchor="middle" font-size="10" fill="#52525b">Ajustes y Privacidad</text>
+
+  <rect x="345" y="80" width="50" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="355" y="98" font-size="10" font-weight="bold">W-07</text>
+
+  <line x1="65" y1="118" x2="395" y2="118" stroke="#18181b" stroke-width="1.8" stroke-dasharray="4,4" />
+
+  <!-- Contenido Inyectado de la Pantalla -->
+  
+  <!-- Bloque 1: Vehículo -->
+  <rect x="68" y="135" width="324" height="85" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="156" font-size="10.5" font-weight="bold">VEHÍCULO VINCULADO (FORDPASS)</text>
+  <text x="82" y="175" font-size="9">• Ford Territory Titanium 1.5L EcoBoost</text>
+  <text x="82" y="192" font-size="9">• VIN: 3FADP4BJ9NM82143 • Módem: 4G LTE</text>
+  <text x="82" y="209" font-size="9">• Conexión: En línea (Protocolo MQTT Cifrado)</text>
+
+  <!-- Bloque 2: Perfiles -->
+  <rect x="68" y="230" width="324" height="120" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="252" font-size="10.5" font-weight="bold">GESTIÓN DE PERFILES FAMILIARES</text>
+  <text x="82" y="272" font-size="9">👤 Tomás Morales: Conductor Joven Activo</text>
+  <text x="82" y="292" font-size="9">👤 Ricardo Morales: Tutor Administrador</text>
+  <text x="82" y="312" font-size="9">👤 Mateo Huarca: Perfil Inclusivo (Hipoacusia)</text>
+  <text x="82" y="335" font-size="8.5" font-weight="bold" fill="#0284c7">+ Añadir Miembro Familiar</text>
+
+  <!-- Bloque 3: Ajustes -->
+  <rect x="68" y="360" width="324" height="150" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="382" font-size="10.5" font-weight="bold">AJUSTES DE PRIVACIDAD Y TELEMETRÍA</text>
+
+  <rect x="82" y="395" width="14" height="14" rx="2" fill="#18181b" />
+  <text x="89" y="406" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="104" y="406" font-size="9">Ocultar mapa satelital detallado al tutor</text>
+
+  <rect x="82" y="420" width="14" height="14" rx="2" fill="#18181b" />
+  <text x="89" y="431" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="104" y="431" font-size="9">Confirmación automática de llegada en Park (P)</text>
+
+  <rect x="82" y="445" width="14" height="14" rx="2" fill="#18181b" />
+  <text x="89" y="456" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="104" y="456" font-size="9">Compartir nivel de batería del smartphone</text>
+
+  <rect x="82" y="470" width="14" height="14" rx="2" fill="#18181b" />
+  <text x="89" y="481" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="104" y="481" font-size="9">Tolerancia de paradas rápidas (15 minutos)</text>
+
+  <!-- Botones -->
+  <rect x="68" y="525" width="155" height="38" rx="8" fill="#ffffff" class="sketch-border" />
+  <text x="145" y="549" text-anchor="middle" font-size="10" font-weight="bold">RESTABLECER</text>
+
+  <rect x="235" y="525" width="157" height="38" rx="8" fill="#18181b" class="sketch-border" />
+  <text x="313" y="549" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">GUARDAR CAMBIOS</text>
+
+
+  <!-- Botón Home Inferior del Smartphone -->
+  <rect x="180" y="860" width="100" height="4" rx="2" fill="#18181b" />
+
+  <!-- Sticky Note de Balsamiq -->
+  <g transform="rotate(-3 340 820)">
+    <rect x="230" y="745" width="165" height="85" rx="2" fill="#fef08a" stroke="#18181b" stroke-width="1.8" filter="url(#sticky-shadow)" />
+    <text x="240" y="765" font-size="10" font-weight="bold" fill="#854d0e">📌 NOTA BALSAMIQ:</text>
+    <text x="240" y="782" font-size="8.5" fill="#713f12">• Gestión de chasis VIN y módem.</text>
+    <text x="240" y="796" font-size="8.5" fill="#713f12">• Roles familiares y privacidad.</text>
+    <text x="240" y="810" font-size="8.5" fill="#713f12">• Aislamiento criptográfico OAuth 2.0.</text>
+  </g>
+</svg>

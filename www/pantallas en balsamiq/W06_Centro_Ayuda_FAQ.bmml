@@ -1,0 +1,42 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="450" measuredH="880" mockupW="400" mockupH="850">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="20" y="10" w="390" h="840" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="50" y="115" w="55" h="26" measuredW="55" measuredH="26" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties><text>%3C%20Atr%C3%A1s</text></controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="110" y="110" w="200" h="-1" measuredW="180" measuredH="20" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties><size>13</size><bold>true</bold><text>Centro%20de%20Ayuda%20y%20FAQ</text></controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="325" y="115" w="50" h="26" measuredW="50" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties><text>%5B%20%3F%20%5D</text></controlProperties>
+    </control>
+
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::SearchBox" x="48" y="155" w="330" h="-1" measuredW="200" measuredH="25" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties><text>Buscar%20dudas%20o%20preguntas...</text></controlProperties>
+    </control>
+
+    <!-- Acordeón de FAQs -->
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Accordion" x="48" y="195" w="330" h="280" measuredW="240" measuredH="240" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>%C2%BFC%C3%B3mo%20se%20calcula%20mi%20Score%20%280-100%29%3F%0A-%20Pondera%2040%25%20freno%20CAN%2C%2030%25%20carril%20y%2030%25%20velocidad.%0A-%20Frenadas%20de%20emergencia%20preventivas%20NO%20descuentan.%0A%C2%BFPor%20qu%C3%A9%20mis%20padres%20no%20ven%20mi%20mapa%20en%20vivo%3F%0A%C2%BFQu%C3%A9%20ocurre%20si%20se%20apaga%20el%20m%C3%B3vil%20del%20hijo%3F</text>
+      </controlProperties>
+    </control>
+
+    <!-- Tarjeta de Asistencia Ford 24/7 -->
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="495" w="330" h="110" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties><text>%C2%BFDudas%20o%20soporte%20t%C3%A9cnico%3F</text></controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Paragraph" x="60" y="520" w="305" h="45" measuredW="200" measuredH="80" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties><size>9</size><text>Asistencia%20Ford%20SafeTeen%2024/7%20disponible%20para%20consultas%20de%20telemetr%C3%ADa%20y%20privacidad%20familiar.</text></controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="60" y="565" w="305" h="30" measuredW="220" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>CONTACTAR%20SOPORTE%20FORD</text></controlProperties>
+    </control>
+
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::StickyNote" x="250" y="625" w="135" h="70" measuredW="109" measuredH="123" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>Resuelve%20dudas%20de%0Aprivacidad%20y%20despeja%0Ael%20p%C3%A1nico%20parental.</text></controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Ford SafeTeen Co-Drive - App Móvil Oficial</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ford: {
+                            blue: '#002c6c',
+                            cyan: '#06b6d4',
+                            dark: '#050811',
+                            card: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Estilos específicos del proyecto -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- PWA & Soporte para App Móvil Nativa (Android & iOS) -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#050811">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ford SafeTeen">
+    <link rel="apple-touch-icon" href="pantallas en balsamiq/W01_Dashboard_Conductor_Joven.svg">
+</head>
+<body class="min-h-screen bg-[#050811] text-gray-100 antialiased select-none font-sans overflow-x-hidden">
+
+    <!-- ================================================================= -->
+    <!-- 1. BARRA SUPERIOR MÓVIL NATIVA (ESTILO PRODUCCIÓN PLAYSTORE / APPLE) -->
+    <!-- ================================================================= -->
+    <header id="mobile-app-header" class="fixed top-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80 px-4 py-2.5 flex items-center justify-between transition-all hidden">
+        <div class="flex items-center gap-2.5">
+            <!-- Emblema Ovalado Ford Oficial -->
+            <div class="w-10 h-6 rounded-full bg-[#002c6c] border border-white/90 flex items-center justify-center font-black italic tracking-tighter text-white text-[11px] shadow-sm shadow-blue-900/60 shrink-0">
+                Ford
+            </div>
+            <div>
+                <h1 class="text-sm font-extrabold tracking-tight text-white leading-tight flex items-center gap-1.5">
+                    <span>SafeTeen</span>
+                    <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-semibold">
+                        Co-Drive
+                    </span>
+                </h1>
+                <div class="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Territory Titanium • 84% Bat</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de Acción Superior: Selector Rápido de Perfil y Menú -->
+        <div class="flex items-center gap-2">
+            <!-- Botón de Cambio de Perfil (Tomás / Ricardo) -->
+            <button id="btn-quick-switch-profile" class="px-2.5 py-1 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-cyan-300 flex items-center gap-1.5 transition-all active:scale-95">
+                <span id="quick-profile-avatar">👤</span>
+                <span id="quick-profile-name" class="text-[11px]">Tomás (Joven)</span>
+            </button>
+
+            <!-- Botón Más / Ajustes Rápido -->
+            <button id="btn-open-more-top" class="p-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-gray-300 hover:text-white border border-slate-800 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- ================================================================= -->
+    <!-- 2. CONTENEDOR PRINCIPAL DE PANTALLAS MÓVILES (FULL WIDTH / APP NATIVA) -->
+    <!-- ================================================================= -->
+    <main class="w-full max-w-md mx-auto min-h-screen px-4 py-6 flex flex-col justify-center items-center relative">
+        
+        <!-- Notificación Toast Flotante para Alertas CAN en Tiempo Real -->
+        <div id="toast-notification" class="fixed top-16 left-4 right-4 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none max-w-md mx-auto">
+            <div id="toast-inner" class="p-3 rounded-2xl bg-slate-900/95 border-2 border-cyan-500 shadow-2xl backdrop-blur-md flex items-center gap-3">
+                <span id="toast-icon" class="text-2xl shrink-0">🚗</span>
+                <div class="flex-1">
+                    <div id="toast-title" class="text-xs font-bold text-white uppercase tracking-wider">Evento CAN Detectado</div>
+                    <div id="toast-desc" class="text-[11px] text-gray-300 leading-snug">Detalles de telemetría</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla del Wireframe Activo (W-01, W-02, W-03, W-04, etc.) -->
+        <div id="app-screen-container" class="w-full flex-1 transition-all duration-200">
+            <!-- Se inyecta la pantalla activa modularmente -->
+        </div>
+
+    </main>
+
+
+    <!-- ================================================================= -->
+    <!-- 4. BOTÓN FLOTANTE (FAB) PARA SIMULADOR TELEMÁTICO CAN (DISCRETO) -->
+    <!-- ================================================================= -->
+    <div id="fab-can-container" class="fixed bottom-20 right-4 z-40 hidden">
+        <button id="btn-open-can-drawer" class="px-3.5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs shadow-xl shadow-cyan-500/30 flex items-center gap-2 active:scale-90 transition-all border border-cyan-300/40 animate-pulse">
+            <span class="text-base">🎮</span>
+            <span class="tracking-wide">Simular CAN</span>
+        </button>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 5. BARRA DE NAVEGACIÓN INFERIOR NATIVA (BOTTOM TAB BAR MÓVIL) -->
+    <!-- ================================================================= -->
+    <nav id="mobile-bottom-tabs" class="fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-lg border-t border-slate-800/90 px-2 py-1.5 flex justify-around items-center shadow-2xl max-w-md mx-auto hidden">
+        
+        <!-- Tab 1: Conducir (Tomás Morales) -->
+        <button id="tab-conducir" class="bottom-tab flex-1 flex flex-col items-center justify-center py-1 rounded-xl text-cyan-400 transition-all group">
+            <div class="tab-icon-wrapper p-1 rounded-lg group-hover:bg-slate-800/60 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <span class="text-[10px] font-bold tracking-tight mt-0.5">Conducir</span>
+            <span class="tab-indicator w-1 h-1 rounded-full bg-cyan-400 mt-0.5"></span>
+        </button>
+
+        <!-- Tab 2: Familia (Ricardo Morales - Paz Mental) -->
+        <button id="tab-familia" class="bottom-tab flex-1 flex flex-col items-center justify-center py-1 rounded-xl text-gray-400 hover:text-white transition-all group">
+            <div class="tab-icon-wrapper p-1 rounded-lg group-hover:bg-slate-800/60 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <span class="text-[10px] font-medium tracking-tight mt-0.5">Familia</span>
+            <span class="tab-indicator w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+        </button>
+
+        <!-- Tab 3: Pacto (Contrato Digital Familiar) -->
+        <button id="tab-pacto" class="bottom-tab flex-1 flex flex-col items-center justify-center py-1 rounded-xl text-gray-400 hover:text-white transition-all group">
+            <div class="tab-icon-wrapper p-1 rounded-lg group-hover:bg-slate-800/60 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <span class="text-[10px] font-medium tracking-tight mt-0.5">Pacto</span>
+            <span class="tab-indicator w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+        </button>
+
+        <!-- Tab 4: Inclusivo (Modo Hipoacusia) -->
+        <button id="tab-inclusivo" class="bottom-tab flex-1 flex flex-col items-center justify-center py-1 rounded-xl text-gray-400 hover:text-white transition-all group">
+            <div class="tab-icon-wrapper p-1 rounded-lg group-hover:bg-slate-800/60 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            </div>
+            <span class="text-[10px] font-medium tracking-tight mt-0.5">Inclusivo</span>
+            <span class="tab-indicator w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+        </button>
+
+        <!-- Tab 5: Más (Menú de Ajustes, SYNC 4, Onboarding) -->
+        <button id="tab-mas" class="bottom-tab flex-1 flex flex-col items-center justify-center py-1 rounded-xl text-gray-400 hover:text-white transition-all group">
+            <div class="tab-icon-wrapper p-1 rounded-lg group-hover:bg-slate-800/60 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
+            <span class="text-[10px] font-medium tracking-tight mt-0.5">Más</span>
+            <span class="tab-indicator w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+        </button>
+
+    </nav>
+
+
+    <!-- ================================================================= -->
+    <!-- 6. BOTTOM SHEET: SIMULADOR TELEMÁTICO CAN EN VIVO -->
+    <!-- ================================================================= -->
+    <div id="drawer-can-simulator" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex flex-col justify-end transition-all">
+        <div class="bg-slate-900 border-t-2 border-cyan-500 rounded-t-3xl p-5 max-w-md mx-auto w-full shadow-2xl animate-slideUp max-h-[85vh] overflow-y-auto">
+            
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🎮</span>
+                    <div>
+                        <h3 class="text-sm font-extrabold uppercase tracking-wider text-cyan-400">
+                            Simulador CAN (Arequipa)
+                        </h3>
+                        <p class="text-[10px] text-gray-400">
+                            Toca un botón para simular en vivo los casos de uso (RF-01 al RF-14)
+                        </p>
+                    </div>
+                </div>
+                <button id="btn-close-can-drawer" class="w-8 h-8 rounded-full bg-slate-800 text-gray-400 hover:text-white flex items-center justify-center font-bold text-sm">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Grilla de Botones de Eventos CAN -->
+            <div class="grid grid-cols-2 gap-2.5 mb-4">
+                <button id="sim-iniciar-marcha" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-emerald-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🟢 Marcha (Drive)</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Av. Ejército (48 km/h) [RF-01]</div>
+                </button>
+
+                <button id="sim-frenada-defensiva" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-cyan-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🛑 Freno Defensivo</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Perro en calzada [RF-03]</div>
+                </button>
+
+                <button id="sim-desvio-carril" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-amber-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🟡 Desvío Carril</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Pulso volante [RF-08]</div>
+                </button>
+
+                <button id="sim-sirena-ambulancia" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-red-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🚨 Sirena Externa</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Micrófonos SYNC 4 [RF-13]</div>
+                </button>
+
+                <button id="sim-llegada-park" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-emerald-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🅿️ Arribo Park (P)</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Campus UTP + Report Card [RF-04]</div>
+                </button>
+
+                <button id="sim-ecall-impacto" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-red-500 font-bold text-xs flex items-center gap-1.5">
+                        <span>💥 e-Call Impacto</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">SOS sensor G &gt;3.0G [RF-12]</div>
+                </button>
+
+                <button id="sim-parada-rapida" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-left transition-all active:scale-95">
+                    <div class="text-purple-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>⏱️ Parada Rápida</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">15 min privacidad [RF-11]</div>
+                </button>
+
+                <button id="sim-ver-certificado" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-purple-500/40 text-left transition-all active:scale-95">
+                    <div class="text-purple-300 font-bold text-xs flex items-center gap-1.5">
+                        <span>📄 Certificado</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Aptitud Inclusiva [RF-14]</div>
+                </button>
+
+                <!-- LiteDash Telematics Simulations: TPMS Leak & OBD Scan -->
+                <button id="sim-fuga-tpms" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-amber-500/40 text-left transition-all active:scale-95">
+                    <div class="text-amber-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🛞 Fuga TPMS</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Pinchazo Del. Der. (24.2 PSI)</div>
+                </button>
+
+                <button id="sim-scan-obd" class="p-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-cyan-500/40 text-left transition-all active:scale-95">
+                    <div class="text-cyan-400 font-bold text-xs flex items-center gap-1.5">
+                        <span>🔬 Escáner OBD</span>
+                    </div>
+                    <div class="text-[10px] text-gray-400 mt-1">Monitores SAE J1979</div>
+                </button>
+            </div>
+
+            <div class="text-center">
+                <button id="btn-close-can-drawer-bottom" class="w-full py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-gray-300 font-bold text-xs transition-all">
+                    ✕ Cerrar Simulador
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 7. BOTTOM SHEET: MENÚ "MÁS" (AJUSTES, SYNC 4, ONBOARDING, MODO UTP) -->
+    <!-- ================================================================= -->
+    <div id="drawer-more-menu" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex flex-col justify-end transition-all">
+        <div class="bg-slate-900 border-t-2 border-slate-700 rounded-t-3xl p-5 max-w-md mx-auto w-full shadow-2xl animate-slideUp max-h-[85vh] overflow-y-auto">
+            
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">⚙️</span>
+                    <div>
+                        <h3 class="text-sm font-extrabold uppercase tracking-wider text-white">
+                            Opciones del Ecosistema
+                        </h3>
+                        <p class="text-[10px] text-gray-400">
+                            Ford SafeTeen Co-Drive • Configuración y Guías
+                        </p>
+                    </div>
+                </div>
+                <button id="btn-close-more-drawer" class="w-8 h-8 rounded-full bg-slate-800 text-gray-400 hover:text-white flex items-center justify-center font-bold text-sm">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Opciones Rápidas -->
+            <div class="space-y-2 mb-4">
+                
+                <!-- Enlace Vehicular y Manos Libres SYNC 4 -->
+                <button id="menu-btn-sync4" class="w-full p-3.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 flex items-center justify-between transition-all group text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl">🚙</span>
+                        <div>
+                            <div class="text-xs font-bold text-white group-hover:text-cyan-300">Enlace Vehicular & Manos Libres SYNC 4</div>
+                            <div class="text-[10px] text-gray-400">Bloqueo al conducir, llamadas VIP en volante y vista de tablero</div>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-xs">›</span>
+                </button>
+
+                <!-- Manual de Uso (Onboarding) -->
+                <button id="menu-btn-onboarding" class="w-full p-3.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 flex items-center justify-between transition-all group text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl">📖</span>
+                        <div>
+                            <div class="text-xs font-bold text-white group-hover:text-cyan-300">Manual de Uso / Onboarding</div>
+                            <div class="text-[10px] text-gray-400">Guía paso a paso de los 4 pasos del ecosistema</div>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-xs">›</span>
+                </button>
+
+                <!-- Centro de Ayuda FAQ -->
+                <button id="menu-btn-ayuda" class="w-full p-3.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 flex items-center justify-between transition-all group text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl">❓</span>
+                        <div>
+                            <div class="text-xs font-bold text-white group-hover:text-cyan-300">Centro de Ayuda y FAQ 24/7</div>
+                            <div class="text-[10px] text-gray-400">Preguntas frecuentes y soporte técnico</div>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-xs">›</span>
+                </button>
+
+                <!-- Configuración VIN y Privacidad -->
+                <button id="menu-btn-configuracion" class="w-full p-3.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 flex items-center justify-between transition-all group text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl">⚙️</span>
+                        <div>
+                            <div class="text-xs font-bold text-white group-hover:text-cyan-300">Configuración, VIN y Privacidad</div>
+                            <div class="text-[10px] text-gray-400">Vincular FordPass, gestión de perfiles y telemetría</div>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-xs">›</span>
+                </button>
+
+                <!-- Información de la Versión y Sistema -->
+                <div class="p-3 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl">ℹ️</span>
+                        <div>
+                            <div class="text-xs font-bold text-gray-300">Ford SafeTeen Co-Drive v1.0.0</div>
+                            <div class="text-[10px] text-gray-400">Ford Territory Titanium 2026 • Build Móvil Oficial</div>
+                        </div>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 text-[10px] font-mono">PROD</span>
+                </div>
+
+                <!-- Botón de Cerrar Sesión / Cambiar de Cuenta -->
+                <button id="menu-btn-logout" class="w-full p-3.5 rounded-2xl bg-red-950/30 hover:bg-red-900/40 border border-red-500/40 flex items-center justify-between transition-all group text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl">🚪</span>
+                        <div>
+                            <div class="text-xs font-bold text-red-300">Cerrar Sesión</div>
+                            <div class="text-[10px] text-gray-400">Regresar a la pantalla de Login y cambiar de usuario</div>
+                        </div>
+                    </div>
+                    <span class="text-red-400 text-xs font-mono font-bold">[Salir]</span>
+                </button>
+
+            </div>
+
+            <div class="text-center pt-2 border-t border-slate-800">
+                <button id="btn-close-more-drawer-bottom" class="w-full py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-gray-300 font-bold text-xs transition-all">
+                    Cerrar Menú
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 7.5. DIÁLOGO MODAL MÓVIL NATIVO (REEMPLAZO DE ALERT, CONFIRM Y PROMPT) -->
+    <!-- ================================================================= -->
+    <div id="mobile-modal-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 transition-all">
+        <div id="mobile-modal-card" class="bg-slate-900 border border-slate-700/80 rounded-3xl p-5 max-w-sm w-full shadow-2xl animate-slideUp text-center">
+            <div id="mobile-modal-icon" class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg shadow-cyan-950">
+                ✨
+            </div>
+            <h3 id="mobile-modal-title" class="text-sm font-extrabold text-white uppercase tracking-wider mb-1.5">
+                Ford SafeTeen
+            </h3>
+            <p id="mobile-modal-message" class="text-xs text-gray-300 leading-relaxed mb-4">
+                Descripción del evento.
+            </p>
+            <div id="mobile-modal-input-container" class="hidden mb-4">
+                <input type="text" id="mobile-modal-input" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 font-mono">
+            </div>
+            <div class="flex items-center gap-2 justify-center" id="mobile-modal-actions">
+                <button id="mobile-modal-cancel" class="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-gray-300 font-bold text-xs transition-all active:scale-95">
+                    Cancelar
+                </button>
+                <button id="mobile-modal-confirm" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-xs shadow-md shadow-cyan-950 transition-all active:scale-95">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 8. SCRIPTS MODULARES DEL MVP -->
+    <!-- ================================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/canBusSimulator.js"></script>
+    <script src="js/supabaseClient.js"></script>
+    <script src="js/views/loginView.js"></script>
+    <script src="js/views/conductorJoven.js"></script>
+    <script src="js/views/tutorFamiliar.js"></script>
+    <script src="js/views/modoInclusivo.js"></script>
+    <script src="js/views/contratoDigital.js"></script>
+    <script src="js/views/onboarding.js"></script>
+    <script src="js/views/centroAyuda.js"></script>
+    <script src="js/views/configuracion.js"></script>
+    <script src="js/views/cabinaSync4.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Registro de Service Worker PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SafeTeen PWA ServiceWorker registrado:', reg.scope))
+                    .catch(err => console.log('Error registrando ServiceWorker:', err));
+            });
+        }
+    </script>
+</body>
+</html>

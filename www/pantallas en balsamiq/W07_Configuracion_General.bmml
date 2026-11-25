@@ -1,0 +1,69 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="450" measuredH="880" mockupW="400" mockupH="850">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="20" y="10" w="390" h="840" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="50" y="115" w="55" h="26" measuredW="55" measuredH="26" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties><text>%3C%20Atr%C3%A1s</text></controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="110" y="110" w="200" h="-1" measuredW="185" measuredH="20" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties><size>13</size><bold>true</bold><text>Configuraci%C3%B3n%20General</text></controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="325" y="115" w="50" h="26" measuredW="50" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties><text>%5B%20%E2%9A%99%20%5D</text></controlProperties>
+    </control>
+
+    <!-- Bloque 1: Vehículo -->
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="150" w="330" h="80" measuredW="200" measuredH="170" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties><text>Veh%C3%ADculo%20Vinculado%20%28FordPass%29</text></controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Paragraph" x="60" y="170" w="305" h="50" measuredW="200" measuredH="80" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties><size>9</size><text>Ford%20Territory%20Titanium%201.5L%20EcoBoost%0AVIN%3A%203FADP4BJ9NM82143%20%E2%80%A2%20M%C3%B3dem%204G%20LTE%0AEstado%3A%20En%20l%C3%ADnea%20%28MQTT%20Cifrado%20Activo%29</text></controlProperties>
+    </control>
+
+    <!-- Bloque 2: Perfiles -->
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="240" w="330" h="120" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties><text>Gesti%C3%B3n%20de%20Perfiles%20Familiares</text></controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="60" y="260" w="305" h="-1" measuredW="260" measuredH="16" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties><size>10</size><text>%E2%80%A2%20Tom%C3%A1s%20Morales%20%28Conductor%20Joven%20Activo%29</text></controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="60" y="280" w="305" h="-1" measuredW="260" measuredH="16" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties><size>10</size><text>%E2%80%A2%20Ricardo%20Morales%20%28Tutor%20Administrador%29</text></controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="60" y="300" w="305" h="-1" measuredW="285" measuredH="16" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties><size>10</size><text>%E2%80%A2%20Mateo%20Huarca%20%28Perfil%20Inclusivo%20Hipoacusia%29</text></controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="60" y="325" w="140" h="24" measuredW="135" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>%2B%20A%C3%B1adir%20Miembro</text></controlProperties>
+    </control>
+
+    <!-- Bloque 3: Ajustes de Privacidad -->
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="370" w="330" h="150" measuredW="200" measuredH="170" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties><text>Ajustes%20de%20Privacidad%20y%20Telemetr%C3%ADa</text></controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="395" w="305" h="20" measuredW="280" measuredH="20" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties><selected>true</selected><size>9</size><text>Ocultar%20mapa%20satelital%20detallado%20al%20tutor</text></controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="420" w="305" h="20" measuredW="285" measuredH="20" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties><selected>true</selected><size>9</size><text>Confirmaci%C3%B3n%20autom%C3%A1tica%20en%20Park%20%28P%29</text></controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="445" w="305" h="20" measuredW="275" measuredH="20" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties><selected>true</selected><size>9</size><text>Compartir%20nivel%20de%20bater%C3%ADa%20del%20m%C3%B3vil</text></controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="470" w="305" h="20" measuredW="280" measuredH="20" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties><selected>true</selected><size>9</size><text>Tolerancia%20de%20paradas%20r%C3%A1pidas%20%2815%20min%29</text></controlProperties>
+    </control>
+
+    <!-- Botones de Acción -->
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="48" y="535" w="155" h="38" measuredW="150" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties><text>RESTABLECER</text></controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Button" x="215" y="535" w="163" h="38" measuredW="160" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>GUARDAR%20CAMBIOS</text></controlProperties>
+    </control>
+
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::StickyNote" x="250" y="595" w="135" h="70" measuredW="109" measuredH="123" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>Administraci%C3%B3n%20central%0Ade%20privacidad%20y%0Aseguridad%20familiar.</text></controlProperties>
+    </control>
+  </controls>
+</mockup>

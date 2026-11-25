@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Ford SafeTeen Co-Drive",
+    "slug": "ford-safeteen-codrive",
+    "version": "1.0.0",
+    "sdkVersion": "58.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#050811"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ford.safeteen.codrive"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#002c6c"
+      },
+      "package": "com.ford.safeteen.codrive"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font"
+    ]
+  }
+}

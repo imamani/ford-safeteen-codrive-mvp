@@ -1,0 +1,73 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="450" measuredH="880" mockupW="400" mockupH="850">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="20" y="10" w="390" h="840" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="50" y="115" w="55" h="26" measuredW="55" measuredH="26" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties><text>%3C%20Atr%C3%A1s</text></controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="110" y="110" w="200" h="-1" measuredW="195" measuredH="20" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties><size>13</size><bold>true</bold><text>Contrato%20Digital%20Familiar</text></controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="315" y="115" w="65" h="26" measuredW="65" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties><text>%5BAcuerdo%5D</text></controlProperties>
+    </control>
+
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="50" y="150" w="325" h="-1" measuredW="280" measuredH="18" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties><align>center</align><bold>true</bold><size>11</size><text>ACUERDO%20DE%20CONFIANZA%20FAMILIAR</text></controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="50" y="170" w="325" h="-1" measuredW="260" measuredH="16" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties><align>center</align><size>9</size><text>Tom%C3%A1s%20Morales%20%E2%87%84%20Ing.%20Ricardo%20Morales</text></controlProperties>
+    </control>
+
+    <!-- Condición 1: Meta de Score (Slider) -->
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="195" w="330" h="115" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties><text>Condici%C3%B3n%201%3A%20Meta%20de%20Score%20Semanal</text></controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="60" y="215" w="305" h="-1" measuredW="240" measuredH="18" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><size>12</size><text>Meta%20Pactada%3A%2088%20PUNTOS</text></controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::HSlider" x="60" y="240" w="305" h="-1" measuredW="33" measuredH="11" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties><value>60</value></controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="60" y="260" w="305" h="-1" measuredW="295" measuredH="15" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>80%20pts%20%28B%C3%A1sico%29%20%E2%80%A2%2088%20pts%20%28Recomendado%29%20%E2%80%A2%2095%20pts%20%28M%C3%A1x%29</text></controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="60" y="280" w="305" h="-1" measuredW="280" measuredH="15" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>Puntaje%20objetivo%20le%C3%ADdo%20del%20bus%20CAN%20del%20auto.</text></controlProperties>
+    </control>
+
+    <!-- Condición 2: Geocercas -->
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="325" w="330" h="160" measuredW="200" measuredH="170" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties><text>Condici%C3%B3n%202%3A%20Geocercas%20Autorizadas</text></controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="350" w="305" h="22" measuredW="270" measuredH="22" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><selected>true</selected><size>10</size><text>Campus%20UTP%20%28Radio%20200m%20%E2%80%A2%20Check-in%20P%29</text></controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="380" w="305" h="22" measuredW="280" measuredH="22" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><selected>true</selected><size>10</size><text>Hogar%20Familiar%20%28Cerro%20Colorado%20150m%29</text></controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::CheckBox" x="60" y="410" w="305" h="22" measuredW="275" measuredH="22" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><selected>true</selected><size>10</size><text>Gimnasio%20/%20Polideportivo%20%28150m%29</text></controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="60" y="445" w="150" h="26" measuredW="145" measuredH="26" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties><size>9</size><text>%2B%20Agregar%20Geocerca</text></controlProperties>
+    </control>
+
+    <!-- Compromiso Mutuo -->
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::FieldSet" x="48" y="500" w="330" h="95" measuredW="200" measuredH="170" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties><text>Compromiso%20de%20Autonom%C3%ADa%20Mutua</text></controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="55" y="520" w="315" h="65" measuredW="200" measuredH="80" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties><size>9</size><text>Si%20Tom%C3%A1s%20mantiene%20Score%20%3E%3D%2088%20pts%2C%20el%20sistema%20autoriza%20autom%C3%A1ticamente%20el%20pr%C3%A9stamo%20el%20fin%20de%20semana%20sin%20discusiones%20subjetivas.</text></controlProperties>
+    </control>
+
+    <!-- Botón -->
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="48" y="615" w="330" h="45" measuredW="295" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties><bold>true</bold><text>CONFIRMAR%20Y%20FIRMAR%20CONTRATO</text></controlProperties>
+    </control>
+
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::StickyNote" x="250" y="675" w="135" h="70" measuredW="109" measuredH="123" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties><size>8</size><text>Sustituye%20discusiones%0Apor%20reglas%20claras.%0ARF-10%20formalizado.</text></controlProperties>
+    </control>
+  </controls>
+</mockup>

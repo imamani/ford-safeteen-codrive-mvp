@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantallas en Balsamiq - Ford SafeTeen Co-Drive (APF3)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .font-balsamiq { font-family: 'Comic Neue', cursive, sans-serif; }
+        .font-ui { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .balsamiq-box {
+            box-shadow: 5px 5px 0px #000000;
+        }
+    </style>
+</head>
+<body class="bg-zinc-100 text-zinc-900 font-ui min-h-screen flex flex-col">
+
+    <!-- Header Corporativo Balsamiq Studio -->
+    <header class="bg-white border-b-2 border-black px-6 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-black text-white font-balsamiq font-bold flex items-center justify-center text-xl shadow-[3px_3px_0px_#000000]">
+                    B
+                </div>
+                <div>
+                    <h1 class="text-lg font-extrabold tracking-tight flex items-center gap-2">
+                        <span>Ford SafeTeen Co-Drive</span>
+                        <span class="text-xs bg-amber-200 text-amber-900 border border-black px-2 py-0.5 rounded font-mono font-bold">
+                            Wireframes Balsamiq • APF3
+                        </span>
+                    </h1>
+                    <p class="text-xs text-zinc-600">
+                        Prototipos de Baja/Media Fidelidad Estilo Balsamiq Mockups • 8 Pantallas Oficiales
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botones de Descarga Global -->
+            <div class="flex items-center gap-2 flex-wrap">
+                <a href="Ford_SafeTeen_CoDrive_Wireframes_Balsamiq.pdf" target="_blank" class="px-3.5 py-2 bg-red-600 hover:bg-red-500 text-white border-2 border-black font-bold text-xs rounded-lg shadow-[3px_3px_0px_#000000] transition-all flex items-center gap-1.5">
+                    <span>📄 Ver Documento PDF (10 Págs)</span>
+                </a>
+                <a href="Ford_SafeTeen_CoDrive_MVP.bmpr" download class="px-3.5 py-2 bg-amber-400 hover:bg-amber-300 border-2 border-black font-bold text-xs rounded-lg shadow-[3px_3px_0px_#000000] transition-all flex items-center gap-1.5">
+                    <span>📦 Descargar Proyecto (.bmpr)</span>
+                </a>
+                <a href="../index.html" class="px-3.5 py-2 bg-white hover:bg-zinc-50 border-2 border-black font-bold text-xs rounded-lg shadow-[3px_3px_0px_#000000] transition-all">
+                    🚀 Abrir MVP en Vivo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de Pestañas para las 8 Pantallas -->
+    <nav class="bg-zinc-200/90 border-b-2 border-black px-4 py-2.5 overflow-x-auto sticky top-[73px] z-40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 min-w-max" id="nav-container">
+            
+                <button onclick="seleccionarPantalla(0)" id="btn-tab-0" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-black text-white shadow-[2px_2px_0px_#000000]">
+                    <span>W-01</span>
+                    <span class="block text-[10px] font-normal opacity-80">Modo Conductor Joven </span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(1)" id="btn-tab-1" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-02</span>
+                    <span class="block text-[10px] font-normal opacity-80">Modo Tutor Familiar </span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(2)" id="btn-tab-2" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-03</span>
+                    <span class="block text-[10px] font-normal opacity-80">Modo Inclusivo & Accesibilidad Sensorial Universal</span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(3)" id="btn-tab-3" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-04</span>
+                    <span class="block text-[10px] font-normal opacity-80">Contrato Digital Familiar y Gestión de Geocercas</span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(4)" id="btn-tab-4" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-05</span>
+                    <span class="block text-[10px] font-normal opacity-80">Manual de Uso y Onboarding Familiar Paso a Paso</span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(5)" id="btn-tab-5" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-06</span>
+                    <span class="block text-[10px] font-normal opacity-80">Centro de Ayuda, Soporte Técnico y FAQ Familiar</span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(6)" id="btn-tab-6" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-07</span>
+                    <span class="block text-[10px] font-normal opacity-80">Configuración General del Ecosistema y Privacidad</span>
+                </button>
+            
+                <button onclick="seleccionarPantalla(7)" id="btn-tab-7" class="tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black transition-all bg-white text-black hover:bg-zinc-100">
+                    <span>W-08</span>
+                    <span class="block text-[10px] font-normal opacity-80">Interfaz Vehicular HMI en Cabina </span>
+                </button>
+            
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Visor del Wireframe (Izquierda / Central) -->
+        <div class="lg:col-span-8 bg-white border-2 border-black rounded-2xl p-4 md:p-6 balsamiq-box flex flex-col items-center">
+            
+            <div class="w-full flex justify-between items-center mb-4 pb-3 border-b-2 border-dashed border-zinc-300">
+                <div>
+                    <span id="screen-badge" class="font-mono text-xs font-bold px-2 py-1 bg-black text-white rounded">
+                        W-01
+                    </span>
+                    <h2 id="screen-title" class="text-base font-extrabold mt-1">
+                        Modo Conductor Joven (Dashboard)
+                    </h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a id="btn-download-bmml" href="W01_Dashboard_Conductor_Joven.bmml" download class="px-3 py-1.5 text-xs font-bold border-2 border-black rounded bg-zinc-100 hover:bg-zinc-200 shadow-[2px_2px_0px_#000000]">
+                        📄 .bmml
+                    </a>
+                    <a id="btn-download-svg" href="W01_Dashboard_Conductor_Joven.svg" download class="px-3 py-1.5 text-xs font-bold border-2 border-black rounded bg-zinc-100 hover:bg-zinc-200 shadow-[2px_2px_0px_#000000]">
+                        🖼️ .svg
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contenedor del Gráfico SVG -->
+            <div class="w-full flex justify-center py-2 bg-zinc-50 rounded-xl border border-dashed border-zinc-300 overflow-auto max-h-[820px]">
+                <img id="screen-svg-img" src="W01_Dashboard_Conductor_Joven.svg" alt="Wireframe Balsamiq" class="max-w-full h-auto drop-shadow-md">
+            </div>
+
+        </div>
+
+        <!-- Panel Lateral de Información y Trazabilidad (Derecha) -->
+        <div class="lg:col-span-4 space-y-4">
+            
+            <!-- Tarjeta de Ficha Técnica del Wireframe -->
+            <div class="bg-white border-2 border-black rounded-2xl p-5 balsamiq-box">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-amber-700 font-mono mb-3">
+                    📋 Ficha Técnica del Prototipo
+                </h3>
+                
+                <div class="space-y-3 text-xs">
+                    <div>
+                        <span class="font-bold text-zinc-500 block">Ubicación en el Informe APF3:</span>
+                        <span id="info-figura" class="font-bold text-black text-sm">Figura 7 (Pág. 43)</span>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-zinc-500 block">Actor / Arquetipo Principal:</span>
+                        <span id="info-actor" class="font-semibold text-black">Tomás Morales (20 años) - Conductor Joven</span>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-zinc-500 block">Requerimientos Funcionales (IEEE 830):</span>
+                        <span id="info-reqs" class="font-mono font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 inline-block mt-0.5">
+                            RF-01, RF-02, RF-06
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-zinc-500 block">Propósito y Valor del Mockup:</span>
+                        <p id="info-resumen" class="text-zinc-700 leading-relaxed mt-1">
+                            Dashboard post-viaje con dial circular de Score (94/100), desglose de frenado CAN (96%), carril (92%) y velocidad (94%), racha de 14 días seguros y medallas de logro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota Metodológica de Co-Evaluación Inter-Grupal -->
+            <div class="bg-amber-50 border-2 border-black rounded-2xl p-5 balsamiq-box font-balsamiq">
+                <h4 class="font-bold text-sm text-black flex items-center gap-1.5 mb-2">
+                    <span>💡 Innovaciones Integradas en APF3:</span>
+                </h4>
+                <ul class="text-xs space-y-2 text-zinc-800 list-disc list-inside">
+                    <li><strong>Perfil Inclusivo (Mateo):</strong> Adaptación auditiva completa según normas ISO 9241-171 y WCAG 2.2 AA.</li>
+                    <li><strong>Alerta en Clúster Digital:</strong> Recomendación del Grupo B (SmartFleet UTP) para visión periférica.</li>
+                    <li><strong>Slider Único de Confianza:</strong> Simplificación del contrato digital para reducir sobrecarga al tutor Ricardo.</li>
+                </ul>
+            </div>
+
+            <!-- Tabla de Archivos Listos -->
+            <div class="bg-white border-2 border-black rounded-2xl p-5 balsamiq-box text-xs">
+                <h4 class="font-bold text-xs uppercase tracking-wide mb-2 text-zinc-700">Archivos en esta Carpeta:</h4>
+                <ul class="space-y-1 font-mono text-[11px] text-zinc-600">
+                    <li>✔ <strong>8 archivos .bmml</strong> (Balsamiq XML editable)</li>
+                    <li>✔ <strong>8 archivos .svg</strong> (Vectores alta resolución)</li>
+                    <li>✔ <strong>1 archivo .bmpr</strong> (Proyecto SQLite oficial)</li>
+                    <li>✔ <strong>LEEME_BALSAMIQ.md</strong> (Manual de importación)</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t-2 border-black p-4 text-center text-xs text-zinc-600 mt-6">
+        Ford SafeTeen Co-Drive • Proyecto Final APF3 • Universidad Tecnológica del Perú (Arequipa - 2026)
+    </footer>
+
+    <script>
+        const dataPantallas = [{"codigo":"W-01","archivoId":"W01_Dashboard_Conductor_Joven","titulo":"Modo Conductor Joven (Dashboard)","figura":"Figura 7 (Pág. 43)","actor":"Tomás Morales (20 años) - Conductor Joven","tipoDispositivo":"phone","reqs":"RF-01, RF-02, RF-06","resumen":"Dashboard post-viaje con dial circular de Score (94/100), desglose de frenado CAN (96%), carril (92%) y velocidad (94%), racha de 14 días seguros y medallas de logro."},{"codigo":"W-02","archivoId":"W02_Tutor_Familiar_PeaceOfMind","titulo":"Modo Tutor Familiar (Peace of Mind Dashboard)","figura":"Figura 8 (Pág. 44)","actor":"Ricardo Morales (52 años) - Tutor y Padre","tipoDispositivo":"phone","reqs":"RF-04, RF-05, RF-07, RF-09","resumen":"Peace of Mind Card [OK], confirmación de arribo a UTP a las 19:45 hrs, monitoreo pasivo de batería del móvil (84%), 0 llamadas al volante, salud de frenos (75%) y aprobación de préstamo."},{"codigo":"W-03","archivoId":"W03_Modo_Inclusivo_Accesibilidad","titulo":"Modo Inclusivo & Accesibilidad Sensorial Universal","figura":"Figura 9 (Pág. 45)","actor":"Mateo Huarca (21 años) - Conductor con Hipoacusia","tipoDispositivo":"phone","reqs":"RF-13, RF-14, WCAG 2.2 AA, ISO 9241-171","resumen":"Toggles para supresión de pitidos, luces cromáticas en SYNC 4, pulsos hápticos en volante, detector inteligente de sirenas de emergencia y vista previa de alerta en clúster."},{"codigo":"W-04","archivoId":"W04_Contrato_Digital_Familiar","titulo":"Contrato Digital Familiar y Gestión de Geocercas","figura":"Figura 10 (Pág. 46)","actor":"Tutor y Conductor Joven (Negociación Mutua)","tipoDispositivo":"phone","reqs":"RF-10","resumen":"Slider interactivo de meta de Score (88 pts), geocercas pactadas con check-in automático (UTP, Hogar, Gimnasio) y cláusula de aprobación automática para el fin de semana."},{"codigo":"W-05","archivoId":"W05_Manual_Uso_Onboarding","titulo":"Manual de Uso y Onboarding Familiar Paso a Paso","figura":"Figura 11 (Pág. 48)","actor":"Nuevos Usuarios y Familias","tipoDispositivo":"phone","reqs":"Adopción y Soporte Ergonómico","resumen":"Guía secuencial en 4 pasos: 1) Vincular VIN con SYNC 4, 2) Pactar Contrato Digital, 3) Conducir en Modo Silencioso, y 4) Llegada Segura con Score."},{"codigo":"W-06","archivoId":"W06_Centro_Ayuda_FAQ","titulo":"Centro de Ayuda, Soporte Técnico y FAQ Familiar","figura":"Figura 12 (Pág. 50)","actor":"Familia / Soporte Técnico Ford","tipoDispositivo":"phone","reqs":"Soporte y Transparencia 24/7","resumen":"Buscador inteligente y preguntas frecuentes que resuelven dudas sobre el algoritmo del Score, la privacidad sin mapa en vivo y contingencias de batería."},{"codigo":"W-07","archivoId":"W07_Configuracion_General","titulo":"Configuración General del Ecosistema y Privacidad","figura":"Figura 13 (Pág. 52)","actor":"Tutor Administrador","tipoDispositivo":"phone","reqs":"Seguridad y Privacidad Telemática","resumen":"Gestión de VIN vehicular, enlace MQTT 4G LTE, perfiles familiares activos (Tomás, Ricardo, Mateo) y casillas de control de privacidad de datos."},{"codigo":"W-08","archivoId":"W08_Cabina_SYNC4_HMI","titulo":"Interfaz Vehicular HMI en Cabina (Ford SYNC 4 de 12\")","figura":"Figura 14 (Pág. 53)","actor":"Conductor en Marcha (Cabina SYNC 4)","tipoDispositivo":"sync4","reqs":"RF-01, RF-08, RF-13","resumen":"Consola táctil de 12 pulgadas con resplandor ambiental cian perimetral, navegación limpia hacia geocerca, telemetría CAN en vivo y franja de alerta visual inclusiva de sirena."}];
+
+        function seleccionarPantalla(index) {
+            const p = dataPantallas[index];
+            if (!p) return;
+
+            // Actualizar imagen y botones
+            document.getElementById('screen-badge').textContent = p.codigo;
+            document.getElementById('screen-title').textContent = p.titulo;
+            document.getElementById('screen-svg-img').src = p.archivoId + '.svg';
+            document.getElementById('btn-download-bmml').href = p.archivoId + '.bmml';
+            document.getElementById('btn-download-svg').href = p.archivoId + '.svg';
+
+            // Actualizar información técnica
+            document.getElementById('info-figura').textContent = p.figura;
+            document.getElementById('info-actor').textContent = p.actor;
+            document.getElementById('info-reqs').textContent = p.reqs;
+            document.getElementById('info-resumen').textContent = p.resumen;
+
+            // Actualizar estilos de pestañas
+            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+                if (i === index) {
+                    btn.className = 'tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black bg-black text-white shadow-[2px_2px_0px_#000000]';
+                } else {
+                    btn.className = 'tab-btn px-3 py-2 rounded-lg text-xs font-bold border-2 border-black bg-white text-black hover:bg-zinc-100';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

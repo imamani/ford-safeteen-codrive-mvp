@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 920" width="460" height="920">
+  <defs>
+    <filter id="balsamiq-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+    <filter id="sticky-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+    text {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      fill: #18181b;
+    }
+    .sketch-border {
+      stroke: #18181b;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Fondo General de Mesa de Trabajo -->
+  <rect x="0" y="0" width="460" height="920" fill="#f8fafc" />
+
+  <!-- Chasis Smartphone Estilo Balsamiq -->
+  <rect x="35" y="25" width="390" height="860" rx="36" fill="#ffffff" stroke="#18181b" stroke-width="3" filter="url(#balsamiq-shadow)" />
+
+  <!-- Bocina y Cámara Frontal (Notch) -->
+  <rect x="190" y="42" width="60" height="6" rx="3" fill="#18181b" />
+  <circle cx="265" cy="45" r="4" fill="#18181b" />
+
+  <!-- Área de Pantalla -->
+  <rect x="52" y="65" width="356" height="780" rx="18" fill="#ffffff" class="sketch-border" />
+
+  <!-- Barra Superior de Navegación -->
+  <rect x="65" y="80" width="45" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="76" y="98" font-size="12" font-weight="bold">[ = ]</text>
+
+  <text x="230" y="93" text-anchor="middle" font-size="14" font-weight="bold">Manual de Uso y Guía</text>
+  <text x="230" y="108" text-anchor="middle" font-size="10" fill="#52525b">Onboarding Paso a Paso</text>
+
+  <rect x="345" y="80" width="50" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="355" y="98" font-size="10" font-weight="bold">W-05</text>
+
+  <line x1="65" y1="118" x2="395" y2="118" stroke="#18181b" stroke-width="1.8" stroke-dasharray="4,4" />
+
+  <!-- Contenido Inyectado de la Pantalla -->
+  
+  <text x="230" y="140" text-anchor="middle" font-size="11" font-weight="bold">ONBOARDING: PASO A PASO FAMILIAR</text>
+  <text x="230" y="155" text-anchor="middle" font-size="9" fill="#71717a">Guía rápida de configuración y uso inicial</text>
+
+  <!-- Paso 1 -->
+  <rect x="68" y="172" width="324" height="85" rx="8" fill="#ffffff" class="sketch-border" />
+  <circle cx="95" cy="214" r="16" fill="#18181b" />
+  <text x="95" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">1</text>
+  <text x="122" y="196" font-size="10" font-weight="bold">Paso 1: Vincular Vehículo con SYNC 4</text>
+  <text x="122" y="212" font-size="8" fill="#52525b">Ingresa el VIN en FordPass para activar</text>
+  <text x="122" y="224" font-size="8" fill="#52525b">la telemetría del bus CAN en segundo plano.</text>
+
+  <!-- Paso 2 -->
+  <rect x="68" y="268" width="324" height="85" rx="8" fill="#ffffff" class="sketch-border" />
+  <circle cx="95" cy="310" r="16" fill="#18181b" />
+  <text x="95" y="316" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2</text>
+  <text x="122" y="292" font-size="10" font-weight="bold">Paso 2: Pactar Contrato Digital</text>
+  <text x="122" y="308" font-size="8" fill="#52525b">Definan la meta semanal de Score (ej. 88 pts)</text>
+  <text x="122" y="320" font-size="8" fill="#52525b">y geocercas autorizadas de arribo seguro.</text>
+
+  <!-- Paso 3 -->
+  <rect x="68" y="364" width="324" height="85" rx="8" fill="#ffffff" class="sketch-border" />
+  <circle cx="95" cy="406" r="16" fill="#18181b" />
+  <text x="95" y="412" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">3</text>
+  <text x="122" y="388" font-size="10" font-weight="bold">Paso 3: Conducir en Modo Silencioso</text>
+  <text x="122" y="404" font-size="8" fill="#52525b">La pantalla SYNC 4 guía con resplandor cian</text>
+  <text x="122" y="416" font-size="8" fill="#52525b">ambiental y Co-Pilot360 sin pitidos molestos.</text>
+
+  <!-- Paso 4 -->
+  <rect x="68" y="460" width="324" height="85" rx="8" fill="#ffffff" class="sketch-border" />
+  <circle cx="95" cy="502" r="16" fill="#18181b" />
+  <text x="95" y="508" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">4</text>
+  <text x="122" y="484" font-size="10" font-weight="bold">Paso 4: Llegada Segura y Score</text>
+  <text x="122" y="500" font-size="8" fill="#52525b">Al situar Park (P), el padre recibe el push</text>
+  <text x="122" y="512" font-size="8" fill="#52525b">y el joven desbloquea insignias de logro.</text>
+
+  <!-- Botón -->
+  <rect x="68" y="560" width="324" height="42" rx="10" fill="#18181b" class="sketch-border" filter="url(#balsamiq-shadow)" />
+  <text x="230" y="586" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">INICIAR TOUR INTERACTIVO</text>
+
+
+  <!-- Botón Home Inferior del Smartphone -->
+  <rect x="180" y="860" width="100" height="4" rx="2" fill="#18181b" />
+
+  <!-- Sticky Note de Balsamiq -->
+  <g transform="rotate(-3 340 820)">
+    <rect x="230" y="745" width="165" height="85" rx="2" fill="#fef08a" stroke="#18181b" stroke-width="1.8" filter="url(#sticky-shadow)" />
+    <text x="240" y="765" font-size="10" font-weight="bold" fill="#854d0e">📌 NOTA BALSAMIQ:</text>
+    <text x="240" y="782" font-size="8.5" fill="#713f12">• Guía secuencial para novatos.</text>
+    <text x="240" y="796" font-size="8.5" fill="#713f12">• Facilita adopción intergeneracional.</text>
+    <text x="240" y="810" font-size="8.5" fill="#713f12">• Reduce fricción tecnológica en 3 min.</text>
+  </g>
+</svg>

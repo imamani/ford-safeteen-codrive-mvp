@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 920" width="460" height="920">
+  <defs>
+    <filter id="balsamiq-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+    <filter id="sticky-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+    text {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      fill: #18181b;
+    }
+    .sketch-border {
+      stroke: #18181b;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Fondo General de Mesa de Trabajo -->
+  <rect x="0" y="0" width="460" height="920" fill="#f8fafc" />
+
+  <!-- Chasis Smartphone Estilo Balsamiq -->
+  <rect x="35" y="25" width="390" height="860" rx="36" fill="#ffffff" stroke="#18181b" stroke-width="3" filter="url(#balsamiq-shadow)" />
+
+  <!-- Bocina y Cámara Frontal (Notch) -->
+  <rect x="190" y="42" width="60" height="6" rx="3" fill="#18181b" />
+  <circle cx="265" cy="45" r="4" fill="#18181b" />
+
+  <!-- Área de Pantalla -->
+  <rect x="52" y="65" width="356" height="780" rx="18" fill="#ffffff" class="sketch-border" />
+
+  <!-- Barra Superior de Navegación -->
+  <rect x="65" y="80" width="45" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="76" y="98" font-size="12" font-weight="bold">[ = ]</text>
+
+  <text x="230" y="93" text-anchor="middle" font-size="14" font-weight="bold">Contrato Digital Familiar</text>
+  <text x="230" y="108" text-anchor="middle" font-size="10" fill="#52525b">Autonomía y Confianza</text>
+
+  <rect x="345" y="80" width="50" height="28" rx="6" fill="#f4f4f5" class="sketch-border" />
+  <text x="355" y="98" font-size="10" font-weight="bold">W-04</text>
+
+  <line x1="65" y1="118" x2="395" y2="118" stroke="#18181b" stroke-width="1.8" stroke-dasharray="4,4" />
+
+  <!-- Contenido Inyectado de la Pantalla -->
+  
+  <text x="230" y="140" text-anchor="middle" font-size="11" font-weight="bold">ACUERDO DE CONFIANZA FAMILIAR</text>
+  <text x="230" y="155" text-anchor="middle" font-size="9" fill="#71717a">Tomás Morales (Hijo) ⇄ Ing. Ricardo Morales (Padre)</text>
+
+  <!-- Condición 1 -->
+  <rect x="68" y="172" width="324" height="115" rx="10" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="195" font-size="10.5" font-weight="bold">Condición 1: Meta de Score Semanal</text>
+  <text x="365" y="195" text-anchor="end" font-size="11" font-weight="bold">88 PUNTOS</text>
+
+  <line x1="82" y1="225" x2="365" y2="225" stroke="#18181b" stroke-width="4" stroke-linecap="round" />
+  <circle cx="260" cy="225" r="10" fill="#ffffff" stroke="#18181b" stroke-width="2.5" />
+  <text x="82" y="248" font-size="8" fill="#71717a">80 pts (Básico)</text>
+  <text x="260" y="248" text-anchor="middle" font-size="8" font-weight="bold">88 pts (Pactado)</text>
+  <text x="365" y="248" text-anchor="end" font-size="8" fill="#71717a">95 pts (Máx)</text>
+
+  <!-- Condición 2 -->
+  <rect x="68" y="298" width="324" height="160" rx="10" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="320" font-size="10.5" font-weight="bold">Condición 2: Geocercas de Arribo</text>
+  <text x="365" y="320" text-anchor="end" font-size="9" fill="#71717a">3 Activas</text>
+
+  <rect x="82" y="332" width="16" height="16" rx="3" fill="#18181b" />
+  <text x="90" y="344" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="108" y="344" font-size="10" font-weight="bold">Campus UTP (Arequipa)</text>
+  <text x="108" y="356" font-size="8" fill="#71717a">Radio 200m • Check-in automático en Park</text>
+
+  <rect x="82" y="368" width="16" height="16" rx="3" fill="#18181b" />
+  <text x="90" y="380" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="108" y="380" font-size="10" font-weight="bold">Hogar Familiar (Cerro Colorado)</text>
+  <text x="108" y="392" font-size="8" fill="#71717a">Radio 150m • Check-in automático en Park</text>
+
+  <rect x="82" y="404" width="16" height="16" rx="3" fill="#18181b" />
+  <text x="90" y="416" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="bold">✓</text>
+  <text x="108" y="416" font-size="10" font-weight="bold">Gimnasio / Polideportivo</text>
+  <text x="108" y="428" font-size="8" fill="#71717a">Radio 150m • Check-in automático</text>
+
+  <!-- Compromiso Mutuo -->
+  <rect x="68" y="470" width="324" height="95" rx="10" fill="#ffffff" class="sketch-border" />
+  <text x="82" y="492" font-size="10.5" font-weight="bold">Compromiso de Autonomía Mutua:</text>
+  <text x="82" y="512" font-size="8.5" fill="#3f3f46">"Si Tomás mantiene un Score semanal &gt;= 88 puntos,</text>
+  <text x="82" y="526" font-size="8.5" fill="#3f3f46">el sistema aprueba automáticamente el vehículo</text>
+  <text x="82" y="540" font-size="8.5" fill="#3f3f46">el viernes sin disputas ni llamadas invasivas."</text>
+
+  <!-- Botón de Firma -->
+  <rect x="68" y="580" width="324" height="42" rx="10" fill="#18181b" class="sketch-border" filter="url(#balsamiq-shadow)" />
+  <text x="230" y="606" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">CONFIRMAR Y FIRMAR CONTRATO</text>
+
+
+  <!-- Botón Home Inferior del Smartphone -->
+  <rect x="180" y="860" width="100" height="4" rx="2" fill="#18181b" />
+
+  <!-- Sticky Note de Balsamiq -->
+  <g transform="rotate(-3 340 820)">
+    <rect x="230" y="745" width="165" height="85" rx="2" fill="#fef08a" stroke="#18181b" stroke-width="1.8" filter="url(#sticky-shadow)" />
+    <text x="240" y="765" font-size="10" font-weight="bold" fill="#854d0e">📌 NOTA BALSAMIQ:</text>
+    <text x="240" y="782" font-size="8.5" fill="#713f12">• Control deslizante único de Score.</text>
+    <text x="240" y="796" font-size="8.5" fill="#713f12">• Erradica negociaciones subjetivas.</text>
+    <text x="240" y="810" font-size="8.5" fill="#713f12">• Formaliza el RF-10 del sistema.</text>
+  </g>
+</svg>
