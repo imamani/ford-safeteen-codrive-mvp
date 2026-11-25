@@ -1,17 +1,5 @@
 # Ford SafeTeen Co-Drive: Ecosistema Telemático y de Aprendizaje Familiar
 
-### Avance de Proyecto Final 3 (APF3) - Semana 12
-**Curso:** Diseño de Productos y Servicios  
-**Docente:** Fernández Bernedo Alberto Edu  
-**Institución:** Universidad Tecnológica del Perú (Sede Arequipa - 2026)  
-**Integrantes del Equipo:**
-- Anderson Roque Zevallos – U22321650
-- Jack Jhonatan Ramos Quispe – U25225261
-- Cesar Del Carpio Achahui – U23254280
-- Ivan Benjamin Mamani Villanueva – U23304519
-
----
-
 ## 📌 Descripción del Proyecto y Alcance del MVP
 
 **Ford SafeTeen Co-Drive** es una solución de software telemático vehicular que transforma la dinámica de uso de automóviles compartidos (específicamente la SUV **Ford Territory Titanium 1.5L EcoBoost**). Erradica la vigilancia satelital continua de corte invasivo (tipo *Life360*) y los bloqueos mecánicos punitivos de fábrica (*Ford MyKey*), reemplazándolos por:
