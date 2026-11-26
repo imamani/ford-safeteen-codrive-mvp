@@ -12,18 +12,39 @@ import {
 } from 'react-native';
 import { WebView } from 'react-native-webview';
 
-// Detecta automáticamente la IP de la PC desde la URL de Metro (funciona en cualquier PC y Wi-Fi)
+// Detecta automáticamente la IP de la PC desde Expo Constants o Metro (compatible con Bridgeless/Hermes)
+function extractHost(candidate) {
+  if (!candidate || typeof candidate !== 'string') return null;
+  const match = candidate.match(/^(?:[a-z]+:\/\/)?([^/:?#]+)/i);
+  const host = match && match[1];
+  if (!host || host === 'localhost' || host === '127.0.0.1') return null;
+  return host;
+}
+
 function detectServerUrl() {
+  const candidates = [];
   try {
-    const scriptURL = NativeModules?.SourceCode?.scriptURL;
-    if (scriptURL && typeof scriptURL === 'string') {
-      const match = scriptURL.match(/^https?:\/\/([^/:]+)(?::\d+)?/);
-      if (match && match[1] && match[1] !== 'localhost' && match[1] !== '127.0.0.1') {
-        return `http://${match[1]}:3000`;
-      }
-    }
+    const Constants = require('expo-constants').default;
+    candidates.push(
+      Constants?.expoConfig?.hostUri,
+      Constants?.expoGoConfig?.debuggerHost,
+      Constants?.linkingUri,
+      Constants?.experienceUrl
+    );
   } catch (e) {
-    // Fallback silencioso a IP por defecto
+    // Fallback silencioso si expo-constants no está disponible
+  }
+  try {
+    candidates.push(NativeModules?.SourceCode?.scriptURL);
+  } catch (e) {
+    // Fallback silencioso
+  }
+
+  for (const candidate of candidates) {
+    const host = extractHost(candidate);
+    if (host) {
+      return `http://${host}:3000`;
+    }
   }
   return 'http://192.168.1.100:3000';
 }
@@ -37,6 +58,10 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [showConfig, setShowConfig] = useState(false);
   const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    console.log('[Ford SafeTeen] Conectando WebView a:', serverUrl);
+  }, [serverUrl]);
 
   useEffect(() => {
     // Si después de 12 segundos sigue cargando, ofrecer opciones de diagnóstico

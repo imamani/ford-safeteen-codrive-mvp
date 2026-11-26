@@ -16,8 +16,8 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-:: 2. Verificar si el servidor local de Node.js esta activo
-netstat -ano | findstr :3000 >nul 2>&1
+:: 2. Verificar si el servidor local de Node.js esta activo (solo en estado LISTENING)
+netstat -ano | findstr ":3000 " | findstr "LISTENING" >nul 2>&1
 if %errorlevel% neq 0 (
     echo [1/3] Iniciando Servidor Web local en puerto 3000...
     start /B node server.js
@@ -58,9 +58,10 @@ echo   2. Abre la aplicacion EXPO GO en tu telefono.
 echo   3. En Android: Toca "Scan QR Code" y escanea el QR abajo.
 echo   4. En iPhone: Abre la camara normal y escanea el QR.
 if not "%DETECTED_IP%"=="" echo   5. Web directa en el celular: http://%DETECTED_IP%:3000
+if not "%DETECTED_IP%"=="" echo   6. URL manual en Expo Go: exp://%DETECTED_IP%:8081
 echo ========================================================
 echo.
 
-npx expo start -c --lan
+npx expo start --lan
 
 pause
